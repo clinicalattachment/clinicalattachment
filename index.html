@@ -13,8 +13,12 @@
     h1, h2, h3 {
       color: #000000;
     }
+    .header-bar-wrapper {
+      background-color: #ffffff;
+    }
     .header-bar {
-      background-color: #f0f4f8;
+      max-width: 100%;
+      margin: 0 auto;
       padding: 1rem;
       display: flex;
       justify-content: space-between;
@@ -76,9 +80,11 @@
   </style>
 </head>
 <body>
-  <div class="header-bar">
-    <img src="https://raw.githubusercontent.com/clinicalattachment/clinicalattachment/main/logo.png" alt="Practice Logo">
-    <div></div>
+  <div class="header-bar-wrapper">
+    <div class="header-bar">
+      <img src="https://raw.githubusercontent.com/clinicalattachment/clinicalattachment/main/logo.png" alt="Practice Logo">
+      <div></div>
+    </div>
   </div>
 
   <div class="hero">
