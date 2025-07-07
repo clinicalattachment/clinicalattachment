@@ -9,65 +9,82 @@
     body {
       background-color: #f0f4f8;
       color: #000000;
+      font-family: Arial, sans-serif;
     }
-    h1, h2, h3 {
+    h1, h2 {
       color: #000000;
     }
+    /* Top white bar for logo */
     .header-bar {
-      background-color: #ffffff;  /* White background */
+      background-color: #ffffff;
       padding: 1rem;
       display: flex;
-      justify-content: flex-end;   /* Logo to right */
+      justify-content: flex-end;
       align-items: center;
     }
     .header-bar img {
       height: 80px;
     }
+    /* Blue hero */
     .hero {
       background-color: #005eb8;
-      padding: 5rem 1rem;   /* Bigger hero */
+      padding: 5rem 1rem 6rem;
       text-align: center;
       margin-top: 0;
+      position: relative;
     }
     .hero h1 {
       font-size: 2.5rem;
       font-weight: bold;
       color: #ffffff;
+      margin-bottom: 0.25rem;
     }
     .hero p {
       font-style: italic;
       color: #ffffff;
+      margin-top: 0;
+      transform: rotate(-3deg);
+      font-size: 1rem;
     }
+    /* On this page links */
     .nav-links ul {
       list-style-type: none;
       padding-left: 0;
+      margin-bottom: 1rem;
     }
     .nav-links li {
-      padding: 4px 0;
+      display: inline-block;
+      margin-right: 1.5rem;
     }
     .nav-links li a {
       color: #005eb8;
       text-decoration: underline;
       font-weight: 500;
+      cursor: pointer;
+      font-size: 1rem;
     }
     .nav-links li a:hover {
+      color: #003e7e;
       text-decoration: underline;
     }
+    /* Section headings */
     section h2 {
       font-size: 1.3rem;
       font-weight: bold;
       margin-top: 2rem;
       color: #000000;
     }
+    /* Fine print */
     .fine-print {
       font-size: 0.85rem;
       color: #333;
-      line-height: 1.4;
+      line-height: 1.2;
       margin-top: 2rem;
     }
     .fine-print p {
-      margin-bottom: 0;
+      margin: 0;
     }
+    /* Footer links centered */
     footer {
       margin-top: 2rem;
       text-align: center;
@@ -76,6 +93,10 @@
       margin: 0 1rem;
       color: #005eb8;
       text-decoration: underline;
+      font-weight: 500;
+    }
+    footer a:hover {
+      color: #003e7e;
     }
   </style>
 </head>
@@ -161,26 +182,26 @@
 
     <section id="contact">
       <h2>Contact Us</h2>
-      <p>Please use the following form or contact us directly at:<br />
+      <p>Please use the following form or contact us directly at:<br>
       Phone: +44 (0) 7808876647 / +44 (0) 7596812127</p>
 
       <form action="https://formsubmit.co/nhsclinicalattachment@gmail.com" method="POST">
         <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_next" value="https://yourusername.github.io/thankyou.html" />
+        <input type="hidden" name="_next" value="https://clinicalattachment.github.io/clinicalattachment/thankyou.html" />
 
         <div class="mb-3">
           <label for="name" class="form-label">Full Name</label>
-          <input type="text" class="form-control" name="name" required />
+          <input type="text" class="form-control" name="name" id="name" required />
         </div>
 
         <div class="mb-3">
           <label for="email" class="form-label">Email Address</label>
-          <input type="email" class="form-control" name="email" required />
+          <input type="email" class="form-control" name="email" id="email" required />
         </div>
 
         <div class="mb-3">
           <label for="message" class="form-label">Your Message</label>
-          <textarea class="form-control" name="message" rows="5" required></textarea>
+          <textarea class="form-control" name="message" id="message" rows="5" required></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary">Send Message</button>
@@ -189,8 +210,8 @@
 
     <section class="fine-print">
       <p>
-        <strong>Programme Fee:</strong> £600<br />
-        <strong>Extension:</strong> May be arranged upon mutual agreement and is subject to availability.<br />
+        <strong>Programme Fee:</strong> £600<br>
+        <strong>Extension:</strong> May be arranged upon mutual agreement and is subject to availability.<br>
         <strong>Dress Code:</strong> No formal dress code is required; smart-casual and professional attire is recommended.
       </p>
     </section>
