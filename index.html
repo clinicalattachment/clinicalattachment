@@ -1,108 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clinical Attachment Programme for IMGs</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
       background-color: #f0f4f8;
       color: #000000;
-      font-family: Arial, sans-serif;
     }
-    h1, h2 {
+    h1, h2, h3 {
       color: #000000;
     }
-    /* Top white bar for logo */
     .header-bar {
-      background-color: #ffffff;
+      background-color: #f0f4f8;
       padding: 1rem;
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       align-items: center;
     }
     .header-bar img {
       height: 80px;
     }
-    /* Blue hero */
     .hero {
       background-color: #005eb8;
-      padding: 5rem 1rem 6rem;
+      padding: 3rem 1rem;
       text-align: center;
       margin-top: 0;
-      position: relative;
     }
     .hero h1 {
       font-size: 2.5rem;
       font-weight: bold;
       color: #ffffff;
-      margin-bottom: 0.25rem;
     }
     .hero p {
       font-style: italic;
       color: #ffffff;
-      margin-top: 0;
-      transform: rotate(-3deg);
-      font-size: 1rem;
     }
-    /* On this page links */
     .nav-links ul {
       list-style-type: none;
       padding-left: 0;
-      margin-bottom: 1rem;
     }
     .nav-links li {
-      display: inline-block;
-      margin-right: 1.5rem;
+      padding: 4px 0;
     }
     .nav-links li a {
       color: #005eb8;
       text-decoration: underline;
       font-weight: 500;
-      cursor: pointer;
-      font-size: 1rem;
     }
     .nav-links li a:hover {
-      color: #003e7e;
       text-decoration: underline;
     }
-    /* Section headings */
     section h2 {
       font-size: 1.3rem;
       font-weight: bold;
       margin-top: 2rem;
       color: #000000;
     }
-    /* Fine print */
     .fine-print {
       font-size: 0.85rem;
       color: #333;
-      line-height: 1.2;
+      line-height: 1.4;
       margin-top: 2rem;
     }
     .fine-print p {
-      margin: 0;
-    }
-    /* Footer links centered */
-    footer {
-      margin-top: 2rem;
-      text-align: center;
+      margin-bottom: 0;
     }
     footer a {
-      margin: 0 1rem;
+      margin-right: 1rem;
       color: #005eb8;
       text-decoration: underline;
-      font-weight: 500;
-    }
-    footer a:hover {
-      color: #003e7e;
     }
   </style>
 </head>
 <body>
   <div class="header-bar">
-    <img src="https://raw.githubusercontent.com/clinicalattachment/clinicalattachment/main/logo.png" alt="Practice Logo" />
+    <img src="https://raw.githubusercontent.com/clinicalattachment/clinicalattachment/main/logo.png" alt="Practice Logo">
+    <div></div>
   </div>
 
   <div class="hero">
@@ -186,22 +162,22 @@
       Phone: +44 (0) 7808876647 / +44 (0) 7596812127</p>
 
       <form action="https://formsubmit.co/nhsclinicalattachment@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_next" value="https://clinicalattachment.github.io/clinicalattachment/thankyou.html" />
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://clinicalattachment.github.io/clinicalattachment/thankyou.html">
 
         <div class="mb-3">
           <label for="name" class="form-label">Full Name</label>
-          <input type="text" class="form-control" name="name" id="name" required />
+          <input type="text" class="form-control" name="name" required>
         </div>
 
         <div class="mb-3">
           <label for="email" class="form-label">Email Address</label>
-          <input type="email" class="form-control" name="email" id="email" required />
+          <input type="email" class="form-control" name="email" required>
         </div>
 
         <div class="mb-3">
           <label for="message" class="form-label">Your Message</label>
-          <textarea class="form-control" name="message" id="message" rows="5" required></textarea>
+          <textarea class="form-control" name="message" rows="5" required></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary">Send Message</button>
@@ -209,16 +185,14 @@
     </section>
 
     <section class="fine-print">
-      <p>
-        <strong>Programme Fee:</strong> £600<br>
-        <strong>Extension:</strong> May be arranged upon mutual agreement and is subject to availability.<br>
-        <strong>Dress Code:</strong> No formal dress code is required; smart-casual and professional attire is recommended.
-      </p>
+      <p><strong>Programme Fee:</strong> £600<br>
+      <strong>Extension:</strong> May be arranged upon mutual agreement and is subject to availability.<br>
+      <strong>Dress Code:</strong> No formal dress code is required; smart-casual and professional attire is recommended.</p>
     </section>
 
-    <footer>
-      <a href="https://hoylandmedicalpractice.nhs.uk/" target="_blank" rel="noopener noreferrer">Main Website</a>
-      <a href="https://www.facebook.com/people/Hoyland-Medical/61572042961195/?_rdr" target="_blank" rel="noopener noreferrer">Facebook Page</a>
+    <footer class="mt-4">
+      <a href="https://hoylandmedicalpractice.nhs.uk/" target="_blank">Main Website</a>
+      <a href="https://www.facebook.com/people/Hoyland-Medical/61572042961195/?_rdr" target="_blank">Facebook Page</a>
     </footer>
   </div>
 </body>
