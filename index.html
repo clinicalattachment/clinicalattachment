@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Clinical Attachment Programme for IMGs</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     body {
       background-color: #f0f4f8;
@@ -29,7 +29,7 @@
     }
     .hero {
       background-color: #005eb8;
-      padding: 6rem 1rem; /* Increased height */
+      padding: 6rem 1rem;
       text-align: center;
       margin-top: 0;
     }
@@ -74,18 +74,39 @@
     }
     footer {
       text-align: center;
+      margin-top: 2rem;
     }
     footer a {
       margin: 0 1rem;
       color: #005eb8;
       text-decoration: underline;
     }
+    /* Feedback box styling */
+    .feedback-box {
+      font-size: 0.9rem;
+      color: #333333;
+      background-color: #f0f4f8;
+      border-left: 4px solid #005eb8;
+      padding: 12px 18px;
+      margin-top: 20px;
+      font-style: italic;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 4px;
+      line-height: 1.4;
+    }
+    /* Contact form styling */
+    .contact-info {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
   </style>
 </head>
 <body>
   <div class="header-bar-wrapper">
     <div class="header-bar">
-      <img src="https://raw.githubusercontent.com/clinicalattachment/clinicalattachment/main/logo.png" alt="Practice Logo">
+      <img src="https://raw.githubusercontent.com/clinicalattachment/clinicalattachment/main/logo.png" alt="Practice Logo" />
       <div></div>
     </div>
   </div>
@@ -110,114 +131,4 @@
 
     <section id="overview">
       <h2>Overview</h2>
-      <p>This Clinical Attachment Programme is specifically designed for International Medical Graduates (IMGs) seeking firsthand exposure to the UK healthcare system. It offers intensive, structured, and fully supervised clinical experience within an NHS GP practice.
-      Participants will benefit from 1-1 mentorship by GP Partners, PLAB 2 OSCE Examiners, and Educational Supervisors, helping them develop core clinical competencies, professional confidence, and familiarity with NHS protocols.</p>
-    </section>
-
-    <section id="structure">
-      <h2>Programme Structure</h2>
-      <ul>
-        <li>Supervised hands-on experience in history-taking and clinical examinations</li>
-        <li>Exposure to real NHS patient consultations and case discussions</li>
-        <li>Training in documentation, prescribing, referrals, and NHS consultation models</li>
-        <li>Structured debriefs following patient consultations</li>
-        <li>Creation of a personalised learning plan targeting individual areas for improvement</li>
-        <li>Participation in quality improvement (QI) projects and audits for portfolio development</li>
-        <li>Teaching on UK guidelines, medical ethics, and effective communication</li>
-        <li>Opportunities to accompany clinicians on home visits and nursing home ward rounds</li>
-        <li>Observation of multidisciplinary teams, including: Advanced Nurse Practitioners, clinical pharmacists, and physiotherapists</li>
-        <li>Observation of minor surgery sessions, joint injections, implant insertions, and more</li>
-      </ul>
-    </section>
-
-    <section id="features">
-      <h2>Additional Features</h2>
-      <ul>
-        <li>Regular feedback and performance reviews</li>
-        <li>Targeted support to address clinical and communication gaps</li>
-        <li>Career guidance, including: GP training insights, CV building and interview preparation, attend and deliver teaching sessions with GP registrars and trainers</li>
-        <li>Accommodation assistance (if required)</li>
-      </ul>
-    </section>
-
-    <section id="applicants">
-      <h2>Who Should Apply?</h2>
-      <p>This programme is ideal for:</p>
-      <ul>
-        <li>IMGs preparing for GMC registration or recently registered</li>
-        <li>IMGs unfamiliar with NHS systems and clinical expectations</li>
-        <li>Doctors seeking taster weeks in General Practice</li>
-        <li>Those wanting to gain practical experience in UK primary care</li>
-      </ul>
-    </section>
-
-    <section id="documents">
-      <h2>Documents Required</h2>
-      <p>In order to apply for the programme, you will be required to have the following documentation:</p>
-      <ul>
-        <li>Passport</li>
-        <li>Visa (if Non-EU) Please note: we are unable to provide any visa sponsorship letter/letter of acceptance</li>
-        <li>Proof of qualification and professional registration (and translation)</li>
-        <li>DBS / CRB / Criminal Records check from home country (and translation)</li>
-        <li>An up-to-date CV</li>
-        <li>GMC Registration Status (if applicable)</li>
-        <li>A brief summary of their learning aims from the programme</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Please use the following form or <strong>WhatsApp</strong> us directly at:<br>
-      Phone/WhatsApp: +44 (0) 7808876647 / +44 (0) 7596812127</p>
-
-      <form action="https://formsubmit.co/nhsclinicalattachment@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://clinicalattachment.github.io/clinicalattachment/thankyou.html">
-
-        <div class="mb-3">
-          <label for="name" class="form-label">Full Name</label>
-          <input type="text" class="form-control" name="name" required>
-        </div>
-
-        <div class="mb-3">
-          <label for="email" class="form-label">Email Address</label>
-          <input type="email" class="form-control" name="email" required>
-        </div>
-
-        <div class="mb-3">
-          <label for="message" class="form-label">Your Message</label>
-          <textarea class="form-control" name="message" rows="5" required></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Send Message</button>
-      </form>
-
-      <!-- Feedback Section -->
-      <div class="mt-5 p-4" style="background-color: #ffffff; border-left: 4px solid #005eb8; border-radius: 8px;">
-        <h3 style="color: #005eb8;">Feedback from Previous Attachees</h3>
-        <blockquote class="blockquote" style="font-style: italic; margin-top: 1rem;">
-          <p>
-            "I truly benefited from the attachment and learned a lot throughout the experience. Everyone—from the managers and nurses to the GP assistants and GPs—was incredibly welcoming and supportive. It was a friendly environment. I felt that everyone genuinely wanted to help. It was a refreshing introduction to the NHS, unlike the hospital setting of course. 
-            <br><br>
-            I have to admit I was hesitant at first since it wasn’t a hospital setting, but I don’t regret it at all. It turned out to be a great starting point. I got to see a wide variety of cases and contributed in history taking and physical examination.
-            <br><br>
-            A special thank you to you and Dr. Ali for your constant support and for always being available to answer all my questions and concerns. I’m genuinely grateful."
-          </p>
-          <footer class="blockquote-footer">Dr AT</footer>
-        </blockquote>
-      </div>
-    </section>
-
-    <section class="fine-print">
-      <p><strong>Programme Fee:</strong> A) 6-week programme for £600 B) 4-week programme for £500<br>
-      <strong>Extension:</strong> May be arranged upon mutual agreement and is subject to availability.<br>
-      <strong>Dress Code:</strong> No formal dress code is required; smart-casual and professional attire is recommended.</p>
-    </section>
-
-    <footer class="mt-4 text-center">
-      <a href="https://hoylandmedicalpractice.nhs.uk/" target="_blank">Main Website</a>
-      <a href="https://www.facebook.com/people/Hoyland-Medical/61572042961195/?_rdr" target="_blank">Facebook Page</a>
-    </footer>
-  </div>
-</body>
-</html>
+      <p
