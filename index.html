@@ -1,122 +1,252 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Clinical Attachment Placements | Hoyland Medical Practice</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clinical Attachment Programme for IMGs</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    body { font-family: Arial, sans-serif; line-height:1.5; margin: 20px; color:#222; }
-    header h1 { font-size: 1.8rem; margin-bottom: 0.25rem; }
-    .lead { margin: 10px 0 20px; color:#333; }
-    table { border-collapse: collapse; width: 100%; max-width:900px; margin-bottom:20px; }
-    table th, table td { border: 1px solid #ddd; padding: 8px; text-align:left; }
-    table th { background:#f4f4f4; }
-    section { margin-bottom: 24px; }
-    .note { font-style:italic; color:#555; }
-    .contact { background:#f9f9f9; padding:10px; border-left:4px solid #0073b7; display:inline-block; }
-    .btn { display:inline-block; padding:8px 12px; text-decoration:none; border-radius:4px; background:#0073b7; color:white; }
+    body {
+      background-color: #f0f4f8;
+      color: #000000;
+    }
+    h1, h2, h3 {
+      color: #000000;
+    }
+    .header-bar-wrapper {
+      background-color: #ffffff;
+    }
+    .header-bar {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header-bar img {
+      height: 80px;
+    }
+    .hero {
+      background-color: #005eb8;
+      padding: 6rem 1rem;
+      text-align: center;
+      margin-top: 0;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    .hero p {
+      font-style: italic;
+      color: #ffffff;
+    }
+    .nav-links ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .nav-links li {
+      padding: 4px 0;
+    }
+    .nav-links li a {
+      color: #005eb8;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+    .nav-links li a:hover {
+      text-decoration: underline;
+    }
+    section h2 {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-top: 2rem;
+      color: #000000;
+    }
+    .fine-print {
+      font-size: 0.85rem;
+      color: #333;
+      line-height: 1.4;
+      margin-top: 2rem;
+    }
+    .fine-print p {
+      margin-bottom: 0;
+    }
+    footer {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    footer a {
+      margin: 0 1rem;
+      color: #005eb8;
+      text-decoration: underline;
+    }
+    /* Updated feedback styling with border, shadow and tilt */
+    .feedback-box {
+      background-color: #f0f4f8; /* same grey background */
+      color: #000;
+      font-size: 0.9rem;
+      line-height: 1.3;
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+      margin-top: 2rem;
+      font-style: normal;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      box-sizing: border-box;
+      border: 1.5px solid #a0a8b9; /* subtle border */
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+      transform: rotate(-1.5deg);
+      transition: transform 0.3s ease;
+    }
+    .feedback-box:hover {
+      transform: rotate(0deg);
+      box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.15);
+    }
+    .feedback-box br {
+      margin-bottom: 0.5rem;
+      content: "";
+      display: block;
+    }
   </style>
 </head>
 <body>
+  <div class="header-bar-wrapper">
+    <div class="header-bar">
+      <a href="https://hoylandmedicalpractice.nhs.uk/" target="_blank">
+        <img src="https://raw.githubusercontent.com/clinicalattachment/clinicalattachment/main/logo.png" alt="Practice Logo" />
+      </a>
+      <div></div>
+    </div>
+  </div>
 
-<header>
-  <h1 id="page-title">Clinical Attachment Placements</h1>
-  <p class="lead" id="intro">
-    This Clinical Attachment Programme is specifically designed for International Medical Graduates (IMGs) seeking firsthand exposure to the UK healthcare system. 
-    It offers intensive, structured, and fully supervised clinical experience within an NHS GP practice. 
-    Participants will benefit from 1-1 mentorship by GP Partners, PLAB 2 OSCE Examiners, and Educational Supervisors, 
-    helping them develop core clinical competencies, professional confidence, and familiarity with NHS protocols.
-  </p>
-</header>
+  <div class="hero">
+    <h1>Clinical Attachment Programme for IMGs</h1>
+    <p>A Fully Supervised, Hands-On NHS Experience</p>
+  </div>
 
-<main>
-  <section id="cohort-info">
-    <h2>Cohorts & Availability</h2>
-    <p class="note">6 week programmes are available upon request and subject to availability.</p>
-    <p class="note">We offer clinical attachment placements in set cohorts throughout the year. Places are subject to availability and allocated on a first come, first served basis.</p>
+  <div class="container py-4">
+    <section class="nav-links mb-4">
+      <h2>On this page:</h2>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#structure">Programme Structure</a></li>
+        <li><a href="#features">Additional Features</a></li>
+        <li><a href="#applicants">Who Should Apply?</a></li>
+        <li><a href="#documents">Documents Required</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </section>
 
-    <p><strong>Cost:</strong> 6-week programme for £600 &nbsp;&nbsp;|&nbsp;&nbsp; 4-week programme for £500 (deposit: £100.00). Both payments are non-refundable.</p>
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>This Clinical Attachment Programme is specifically designed for International Medical Graduates (IMGs) seeking firsthand exposure to the UK healthcare system. It offers intensive, structured, and fully supervised clinical experience within an NHS GP practice.
+      Participants will benefit from 1-1 mentorship by GP Partners, PLAB 2 OSCE Examiners, and Educational Supervisors, helping them develop core clinical competencies, professional confidence, and familiarity with NHS protocols.</p>
+    </section>
 
-    <table id="cohort-table" aria-label="Cohort dates">
-      <thead>
-        <tr>
-          <th>Cohort Name</th>
-          <th>Clinical Attachment Cohort Dates</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Alpha</td><td>5 January 2026 – 30 January 2026</td></tr>
-        <tr><td>Beta</td><td>2 February 2026 – 27 February 2026</td></tr>
-        <tr><td>Gamma</td><td>2 March 2026 – 27 March 2026</td></tr>
-        <tr><td>Delta</td><td>30 March 2026 – 24 April 2026</td></tr>
-        <tr><td>Epsilon</td><td>27 April 2026 – 22 May 2026</td></tr>
-        <tr><td>Zeta</td><td>25 May 2026 – 19 June 2026</td></tr>
-        <tr><td>Eta</td><td>22 June 2026 – 17 July 2026</td></tr>
-        <tr><td>Theta</td><td>20 July 2026 – 14 August 2026</td></tr>
-        <tr><td>Iota</td><td>17 August 2026 – 11 September 2026</td></tr>
-        <tr><td>Kappa</td><td>14 September 2026 – 9 October 2026</td></tr>
-        <tr><td>Lambda</td><td>12 October 2026 – 6 November 2026</td></tr>
-        <tr><td>Mu</td><td>9 November 2026 – 4 December 2026</td></tr>
-        <tr><td>Nu</td><td>7 December 2026 – 1 January 2027</td></tr>
-      </tbody>
-    </table>
-  </section>
+    <section id="structure">
+      <h2>Programme Structure</h2>
+      <ul>
+        <li>Supervised hands-on experience in history-taking and clinical examinations</li>
+        <li>Exposure to real NHS patient consultations and case discussions</li>
+        <li>Training in documentation, prescribing, referrals, and NHS consultation models</li>
+        <li>Structured debriefs following patient consultations</li>
+        <li>Creation of a personalised learning plan targeting individual areas for improvement</li>
+        <li>Participation in quality improvement (QI) projects and audits for portfolio development</li>
+        <li>Teaching on UK guidelines, medical ethics, and effective communication</li>
+        <li>Opportunities to accompany clinicians on home visits and nursing home ward rounds</li>
+        <li>Observation of multidisciplinary teams, including: Advanced Nurse Practitioners, clinical pharmacists, and physiotherapists</li>
+        <li>Observation of minor surgery sessions, joint injections, implant insertions, and more</li>
+      </ul>
+    </section>
 
-  <section id="what-offer">
-    <h2>What Clinical Attachments Does Hoyland Medical Practice Offer?</h2>
-    <p>We offer clinical attachment placements in General Practice settings. Please note that all placements are observational only, and patient safety and confidentiality remain the priority.</p>
-  </section>
+    <section id="features">
+      <h2>Additional Features</h2>
+      <ul>
+        <li>Regular feedback and performance reviews</li>
+        <li>Targeted support to address clinical and communication gaps</li>
+        <li>Career guidance, including: GP training insights, CV building and interview preparation, attend and deliver teaching sessions with GP registrars and trainers</li>
+        <li>Accommodation assistance (if required)</li>
+      </ul>
+    </section>
 
-  <section id="entry-criteria">
-    <h2>Clinical Attachment Entry Criteria</h2>
-    <p>Applicants must meet the below criteria and be able to show evidence for each.</p>
-    <ul>
-      <li>Applicants must be an international medical graduate (IMG).</li>
-      <li>Non-EU Doctors – Applicants must have PLAB 1 and PLAB 2 or be working towards PLAB 2.</li>
-      <li>Applicants must have completed IELTS at 7.5 or above (OET also accepted).</li>
-      <li>Applicants must provide an Overseas Police Certificate.</li>
-      <li>Applicants must have graduated no more than 5 years ago.</li>
-      <li>Applicants are only permitted one placement at Hoyland Medical Practice and must not have already undertaken one here previously.</li>
-    </ul>
-  </section>
+    <section id="applicants">
+      <h2>Who Should Apply?</h2>
+      <p>This programme is ideal for:</p>
+      <ul>
+        <li>IMGs preparing for GMC registration or recently registered</li>
+        <li>IMGs unfamiliar with NHS systems and clinical expectations</li>
+        <li>Doctors seeking taster weeks in General Practice</li>
+        <li>Those wanting to gain practical experience in UK primary care</li>
+      </ul>
+    </section>
 
-  <section id="how-to-apply">
-    <h2>How Do I Apply?</h2>
-    <p>Follow these steps to apply:</p>
-    <ol>
-      <li>Download and complete the Clinical Attachment Application Form (incomplete forms will be declined).</li>
-      <li>Return your completed form, CV, and supporting evidence to <strong id="contact-email">info@clinicalattachment.com</strong>.</li>
-      <li>Your request will be reviewed and you will be contacted with the outcome.</li>
-      <li>If successful, you will be asked to pay the £100 deposit by the stated deadline and send evidence of payment.</li>
-      <li>Complete Occupational Health requirements by the deadline (required to progress).</li>
-      <li>Pay the final balance at least 2 weeks before the start date.</li>
-      <li>You will be sent a placement agreement and induction information.</li>
-    </ol>
-  </section>
+    <section id="documents">
+      <h2>Documents Required</h2>
+      <p>In order to apply for the programme, you will be required to have the following documentation:</p>
+      <ul>
+        <li>Passport</li>
+        <li>Visa (if Non-EU) Please note: we are unable to provide any visa sponsorship letter/letter of acceptance</li>
+        <li>Proof of qualification and professional registration (and translation)</li>
+        <li>DBS / CRB / Criminal Records check from home country (and translation)</li>
+        <li>An up-to-date CV</li>
+        <li>GMC Registration Status (if applicable)</li>
+        <li>A brief summary of their learning aims from the programme</li>
+      </ul>
+    </section>
 
-  <section id="faqs">
-    <h2>Frequently Asked Questions</h2>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Please use the following form or contact the Hoyland Medical Practice at 
+      <a href="tel:+441226355800">+44 (0) 1226 355800</a></p>
 
-    <h3>What will my placement involve?</h3>
-    <p>It will depend on the area of General Practice you observe. Please note the clinical attachment is observational only.</p>
+      <form action="https://formsubmit.co/nhsclinicalattachment@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://clinicalattachment.github.io/clinicalattachment/thankyou.html" />
 
-    <h3>I’ve missed the start date; can I still apply?</h3>
-    <p>No — if the cohort has already started you cannot apply, but you can apply for the next one.</p>
-  </section>
+        <div class="mb-3">
+          <label for="name" class="form-label">Full Name</label>
+          <input type="text" class="form-control" name="name" required />
+        </div>
 
-  <section id="form">
-    <h2>Application Form</h2>
-    <!-- KEEPING your existing form embed -->
-    <!-- Replace this placeholder with the exact <form> code from your live site -->
-    <?php include 'form.php'; ?>
-  </section>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" name="email" required />
+        </div>
 
-  <section id="contact">
-    <h2>Further Information</h2>
-    <p>If you have any further questions, email: <span class="contact" id="contact-block-email">info@clinicalattachment.com</span></p>
-    <p><a class="btn" href="mailto:info@clinicalattachment.com">Email the team</a></p>
-  </section>
-</main>
+        <div class="mb-3">
+          <label for="message" class="form-label">Your Message</label>
+          <textarea class="form-control" name="message" rows="5" required></textarea>
+        </div>
 
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </section>
+
+    <section class="fine-print">
+      <p><strong>Programme Fee:</strong> A) 6-week programme for £600 B) 4-week programme for £500<br />
+      <strong>Extension:</strong> May be arranged upon mutual agreement and is subject to availability.<br />
+      <strong>Dress Code:</strong> No formal dress code is required; smart-casual and professional attire is recommended.</p>
+    </section>
+
+    <section class="feedback-box" aria-label="Participant Feedback">
+      <p>
+        I truly benefited from the attachment and learned a lot throughout the experience. Everyone—from the managers and nurses to the GP assistants and GPs—was incredibly welcoming and supportive. It was a friendly environment. I felt that everyone genuinely wanted to help.
+        <br /><br />
+        I have to admit I was hesitant at first since it wasn’t a hospital setting, but I don’t regret it at all. It turned out to be a great starting point. I got to see a wide variety of cases and contributed in history taking and physical examination.
+        <br /><br />
+        A special thank you to you and Dr. Ali for your constant support and for always being available to answer all my questions and concerns. I’m genuinely grateful.
+        <br /><br />
+        <em>— Dr AT, IMG</em>
+      </p>
+    </section>
+
+    <footer class="mt-4 text-center">
+      <a href="https://hoylandmedicalpractice.nhs.uk/" target="_blank">Main Website</a>
+      <a href="https://www.facebook.com/people/Hoyland-Medical/61572042961195/?_rdr" target="_blank">Facebook Page</a>
+      <a href="about.html">About Us</a>
+    </footer>
+  </div>
 </body>
 </html>
