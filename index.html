@@ -64,33 +64,6 @@
         table tr:nth-child(even) {
             background-color: #f2f2f2;
         }
-        form {
-            margin-top: 20px;
-        }
-        form label {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-        }
-        form input, form textarea, form select {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-        }
-        form button {
-            margin-top: 20px;
-            background-color: #004d99;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-        form button:hover {
-            background-color: #003366;
-        }
         footer a {
             color: #ffffff;
             text-decoration: underline;
@@ -139,7 +112,6 @@
         <li><a href="#overview">Overview</a></li>
         <li><a href="#select-cohort">Select Your Cohort</a></li>
         <li><a href="#programme-fee">Programme Fee</a></li>
-        <li><a href="#application-form">Application Form</a></li>
     </ul>
 </nav>
 
@@ -196,39 +168,6 @@
         </ul>
         <p>To secure your placement, a £100 deposit is required, with the remaining balance payable according to your chosen programme. Please note that both the deposit and final payment are non-refundable.</p>
         <p>While we are happy to accept full payment on your first day of starting the programme, this does not guarantee your placement, as allocations are made on a first-come, first-served basis.</p>
-    </section>
-
-    <section id="application-form">
-        <h2>Application Form</h2>
-        <form action="#" method="post">
-            <label for="full-name">Full Name</label>
-            <input type="text" id="full-name" name="full-name" required>
-
-            <label for="address">Address (Please provide UK address if secured accommodation in UK)</label>
-            <textarea id="address" name="address" rows="3" required></textarea>
-
-            <label for="cohort">Clinical Attachment Cohort Applying For (choose from above timetable)</label>
-            <input type="text" id="cohort" name="cohort" required>
-
-            <label for="duration">Duration</label>
-            <select id="duration" name="duration" required>
-                <option value="">-- Select Duration --</option>
-                <option value="6-week-programme">6-week programme</option>
-                <option value="4-week-programme">4-week programme</option>
-            </select>
-
-            <label for="residency">Residency Status</label>
-            <select id="residency" name="residency" required>
-                <option value="">-- Select Residency Status --</option>
-                <option value="uk">Residing in the UK</option>
-                <option value="overseas">Applying from Overseas</option>
-            </select>
-
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" rows="5"></textarea>
-
-            <button type="submit">Submit Application</button>
-        </form>
     </section>
 
 </main>
