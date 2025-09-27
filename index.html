@@ -13,12 +13,9 @@
       font-size: 1.05rem;
       line-height: 1.6;
     }
-    h1, h2 {
+    h1, h2, h3 {
       color: #000000;
       font-weight: 600;
-    }
-    h2 {
-      font-size: 1.4rem;
     }
     .header-bar-wrapper {
       background-color: #ffffff;
@@ -34,7 +31,6 @@
     .header-bar img {
       height: 80px;
     }
-    /* Hero styling */
     .hero {
       background-color: #005eb8;
       padding: 4rem 1rem;
@@ -56,10 +52,13 @@
       margin: 0 auto;
     }
     @media (max-width: 768px) {
-      .hero h1 { font-size: 2rem; }
-      .hero p { font-size: 1rem; }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
     }
-    /* Navigation links */
     .nav-links ul {
       list-style-type: none;
       padding-left: 0;
@@ -72,32 +71,51 @@
       text-decoration: underline;
       font-weight: bold;
     }
-    .nav-links li a:hover { text-decoration: underline; }
-    /* Cohort Table */
+    .nav-links li a:hover {
+      text-decoration: underline;
+    }
+    section h2 {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-top: 2rem;
+      color: #000000;
+    }
     table.cohort-table {
       width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
+      border-collapse: collapse;
       margin-top: 1rem;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     table.cohort-table th, table.cohort-table td {
-      padding: 0.75rem 1rem;
+      border: 1px solid #ccc;
+      padding: 0.75rem;
       text-align: left;
     }
     table.cohort-table th {
-      background-color: #005eb8;
-      color: #ffffff;
+      background-color: #e6eef7;
       font-weight: 600;
     }
-    table.cohort-table tr:nth-child(even) td { background-color: #f6f8fa; }
-    table.cohort-table td { border-bottom: 1px solid #ddd; }
-    /* Fine print */
-    .fine-print { font-size: 0.85rem; color: #333; line-height: 1.4; margin-top: 2rem; }
-    footer { text-align: center; margin-top: 2rem; padding: 1rem; }
-    footer a { margin: 0 1rem; color: #005eb8; text-decoration: underline; }
+    table.cohort-table td:first-child {
+      font-weight: 600;
+    }
+    .fine-print {
+      font-size: 0.85rem;
+      color: #333;
+      line-height: 1.4;
+      margin-top: 2rem;
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1rem;
+    }
+    footer a {
+      margin: 0 1rem;
+      color: #005eb8;
+      text-decoration: underline;
+    }
+    .section-spacing {
+      margin-top: 2rem;
+    }
   </style>
 </head>
 <body>
@@ -127,8 +145,8 @@
         <li><a href="#documents">Documents Required</a></li>
         <li><a href="#cohorts">Choose Your Cohort</a></li>
         <li><a href="#fees">Programme Fee</a></li>
-        <li><a href="#application-process">Application Process for Clinical Attachment</a></li>
         <li><a href="#application-form">Online Application Form</a></li>
+        <li><a href="#application-process">Application Process for Clinical Attachment</a></li>
       </ul>
     </section>
 
@@ -137,7 +155,7 @@
       <p>Hoyland Medical Practice offers a Clinical Attachment Programme specifically designed for International Medical Graduates (IMGs) seeking firsthand exposure to the UK healthcare system. The programme provides intensive, structured, and fully supervised clinical experience within an NHS GP practice. Participants receive one-to-one mentorship from GP Partners, PLAB 2 OSCE Examiners, and Educational Supervisors, supporting the development of core clinical competencies, professional confidence, and familiarity with NHS protocols.</p>
     </section>
 
-    <section id="structure">
+    <section id="structure" class="section-spacing">
       <h2>Programme Structure</h2>
       <ul>
         <li>Supervised hands-on experience in history-taking and clinical examinations</li>
@@ -153,17 +171,17 @@
       </ul>
     </section>
 
-    <section id="features">
+    <section id="features" class="section-spacing">
       <h2>Additional Features</h2>
       <ul>
         <li>Regular feedback and performance reviews</li>
         <li>Targeted support to address clinical and communication gaps</li>
-        <li>Career guidance, including GP training insights, CV building, interview preparation, and teaching sessions with registrars and trainers</li>
+        <li>Career guidance, including GP training insights, CV building, and interview preparation; attend and deliver teaching sessions with GP registrars and trainers</li>
         <li>Accommodation assistance (if required)</li>
       </ul>
     </section>
 
-    <section id="applicants">
+    <section id="applicants" class="section-spacing">
       <h2>Who Should Apply?</h2>
       <ul>
         <li>IMGs preparing for GMC registration or recently registered</li>
@@ -173,7 +191,7 @@
       </ul>
     </section>
 
-    <section id="documents">
+    <section id="documents" class="section-spacing">
       <h2>Documents Required</h2>
       <ul>
         <li>Passport</li>
@@ -186,7 +204,7 @@
       </ul>
     </section>
 
-    <section id="cohorts">
+    <section id="cohorts" class="section-spacing">
       <h2>Choose Your Cohort</h2>
       <p><strong>We offer both a 6-week programme and 4-week programme.</strong> Below are the cohorts for the 4-week programme. If you require a 6-week clinical attachment, please mention this on the application form. This may be arranged upon mutual agreement and is subject to availability.</p>
 
@@ -203,7 +221,7 @@
       </table>
     </section>
 
-    <section id="fees">
+    <section id="fees" class="section-spacing">
       <h2>Programme Fee</h2>
       <ul>
         <li><strong>6-week programme – £600</strong></li>
@@ -213,52 +231,7 @@
       <p>Both the deposit and final payment are non-refundable. Full payment on your first day does not guarantee placement; allocations are first-come, first-served.</p>
     </section>
 
-    <section id="application-process">
-      <h2>Application Process for Clinical Attachment</h2>
-      <p>Below are the steps of the application process:</p>
-
-      <p><strong>Step 1: Complete the Application Form</strong></p>
-      <ul>
-        <li>Fill in the application form below (all fields are mandatory).</li>
-        <li>Incomplete forms may delay processing.</li>
-        <li>Each cohort has a maximum of 2 placements; allocation is strictly first-come, first-served.</li>
-      </ul>
-
-      <p><strong>Step 2: Submit Your Documents</strong></p>
-      <ul>
-        <li>Email required documents to <a href="mailto:syicb-barnsley.hoyland@nhs.net">syicb-barnsley.hoyland@nhs.net</a></li>
-        <li>Refer to Documents Required section for the full list.</li>
-        <li>We will review and verify your documents and notify you once approved.</li>
-      </ul>
-
-      <p><strong>Step 3: Secure Your Placement with Payment</strong></p>
-      <ul>
-        <li>£100 deposit secures your attachment dates.</li>
-        <li>Final balance can be paid immediately or on the first day (depends on chosen programme).</li>
-        <li>Place is only guaranteed after deposit is received.</li>
-      </ul>
-
-      <p><strong>Step 4: Optional Informal Visit</strong></p>
-      <ul>
-        <li>You may arrange a 45-minute tour of The Hoyland Centre.</li>
-        <li>Meet members of our team, including doctors.</li>
-        <li>Deposit payment may also be made on the same day.</li>
-      </ul>
-
-      <p><strong>Step 5: Induction & Start of Placement</strong></p>
-      <ul>
-        <li>Attend induction at the GP practice on the first day.</li>
-        <li>Your personalised timetable will be sent one week before placement.</li>
-      </ul>
-
-      <p><strong>Cancellations</strong></p>
-      <ul>
-        <li>If unable to attend or wish to withdraw, notify via <a href="mailto:syicb-barnsley.hoyland@nhs.net">syicb-barnsley.hoyland@nhs.net</a>.</li>
-        <li>All fees paid are non-refundable.</li>
-      </ul>
-    </section>
-
-    <section id="application-form">
+    <section id="application-form" class="section-spacing">
       <h2>Online Application Form</h2>
       <p>Please use the following form for clinical attachment registration:</p>
 
@@ -278,7 +251,17 @@
 
         <div class="mb-3">
           <label class="form-label">Clinical Attachment Cohort Applying For (choose from above timetable)</label>
-          <input type="text" class="form-control" name="cohort" required />
+          <select class="form-control" name="cohort" required>
+            <option value="">Select your cohort</option>
+            <option value="Alpha">Alpha - 3 Nov 2025 – 28 Nov 2025</option>
+            <option value="Beta">Beta - 1 Dec 2025 – 25 Dec 2025</option>
+            <option value="Gamma">Gamma - 5 Jan 2026 – 30 Jan 2026</option>
+            <option value="Delta">Delta - 2 Feb 2026 – 27 Feb 2026</option>
+            <option value="Epsilon">Epsilon - 2 Mar 2026 – 27 Mar 2026</option>
+            <option value="Zeta">Zeta - 6 Apr 2026 – 1 May 2026</option>
+            <option value="Eta">Eta - 4 May 2026 – 29 May 2026</option>
+            <option value="Theta">Theta - 1 Jun 2026 – 26 Jun 2026</option>
+          </select>
         </div>
 
         <div class="mb-3">
@@ -306,6 +289,53 @@
 
         <button type="submit" class="btn btn-primary">Send Message</button>
       </form>
+    </section>
+
+    <section id="application-process" class="section-spacing">
+      <h2>Application Process for Clinical Attachment</h2>
+      <p>Below are the steps of the application process:</p>
+
+      <p><strong>Step 1: Complete the Application Form</strong></p>
+      <ul>
+        <li>Fill in the application form below (all fields are mandatory).</li>
+        <li>Incomplete forms may delay the processing of your application.</li>
+        <li>Please note: each cohort has a maximum of 2 placements to ensure high-quality supervision and meaningful learning opportunities, and places are allocated strictly on a first-come, first-served basis.</li>
+      </ul>
+
+      <p><strong>Step 2: Submit Your Documents</strong></p>
+      <ul>
+        <li>Once you have submitted your form, please email the required documents to: <a href="mailto:syicb-barnsley.hoyland@nhs.net">syicb-barnsley.hoyland@nhs.net</a></li>
+        <li>Refer to the Documents Required section on this website for the full list.</li>
+        <li>We will review and verify your documents and notify you once they have been approved.</li>
+      </ul>
+
+      <p><strong>Step 3: Secure Your Placement with Payment</strong></p>
+      <ul>
+        <li>£100 deposit – secures your attachment dates</li>
+        <li>Final balance – can be either paid immediately or on the first day of your placement (amount depends on your chosen programme)</li>
+        <li>Please note: your place will only be guaranteed once the deposit has been received.</li>
+      </ul>
+
+      <p><strong>Step 4: Optional Informal Visit</strong></p>
+      <ul>
+        <li>You are welcome to arrange an informal visit before your attachment begins.</li>
+        <li>This includes a 45-minute tour of The Hoyland Centre and the chance to meet members of our team, including doctors.</li>
+        <li>If you wish, you may also make your deposit payment on the same day as your informal visit to secure your place.</li>
+      </ul>
+
+      <p><strong>Step 5: Induction & Start of Placement</strong></p>
+      <ul>
+        <li>On your first day, you will attend an induction at the GP practice.</li>
+        <li>Your personalised timetable will be sent to you one week before your placement begins.</li>
+      </ul>
+
+      <p><strong>Cancellations</strong></p>
+      <ul>
+        <li>If you are unable to attend your allocated cohort or wish to withdraw your application, please notify us by emailing <a href="mailto:syicb-barnsley.hoyland@nhs.net">syicb-barnsley.hoyland@nhs.net</a>.</li>
+        <li>Please note: any fees paid are non-refundable.</li>
+      </ul>
+
+      <p>We strongly encourage applicants to review our FAQs before submitting an application.</p>
     </section>
 
     <footer class="mt-4 text-center">
