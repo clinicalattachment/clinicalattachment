@@ -67,23 +67,23 @@
       margin-top: 2rem;
       color: #000000;
     }
-    .fine-print {
-      font-size: 0.85rem;
-      color: #333;
-      line-height: 1.4;
-      margin-top: 2rem;
-    }
-    .fine-print p {
-      margin-bottom: 0;
-    }
-    footer {
-      text-align: center;
+    table.cohort-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 0.5rem;
       margin-top: 1rem;
     }
-    footer a {
-      margin: 0 1rem;
-      color: #005eb8;
-      text-decoration: underline;
+    table.cohort-table td {
+      padding: 0.75rem 1rem;
+      background-color: #e6eef7;
+      border-radius: 8px;
+    }
+    table.cohort-table td:first-child {
+      font-weight: 600;
+    }
+    table.cohort-table td:last-child {
+      text-align: right;
+      font-style: italic;
     }
     .feedback-box {
       background-color: #f0f4f8;
@@ -112,19 +112,14 @@
       content: "";
       display: block;
     }
-    table.cohort-table {
-      width: 100%;
-      border-collapse: collapse;
+    footer {
+      text-align: center;
       margin-top: 1rem;
     }
-    table.cohort-table th, table.cohort-table td {
-      border: 1px solid #ccc;
-      padding: 0.75rem;
-      text-align: left;
-    }
-    table.cohort-table th {
-      background-color: #e6eef7;
-      font-weight: 600;
+    footer a {
+      margin: 0 1rem;
+      color: #005eb8;
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -215,36 +210,32 @@
     </section>
 
     <section id="cohorts">
-      <h2><strong>Choose Your Cohort</strong></h2>
+      <h2>Choose Your Cohort</h2>
       <p><strong>We offer both a 6-week programme and 4-week programme.</strong> 
       Below are the cohorts made for the 4-week programme. If you require a 
       6-week clinical attachment, please mention this on the application form. 
       This may be arranged upon mutual agreement and is subject to availability.</p>
 
       <table class="cohort-table">
-        <tr>
-          <th>Dates</th>
-          <th>Cohort Name</th>
-        </tr>
-        <tr><td>3 Nov 2025 – 28 Nov 2025</td><td>Alpha</td></tr>
-        <tr><td>1 Dec 2025 – 25 Dec 2025</td><td>Beta</td></tr>
-        <tr><td>5 Jan 2026 – 30 Jan 2026</td><td>Gamma</td></tr>
-        <tr><td>2 Feb 2026 – 27 Feb 2026</td><td>Delta</td></tr>
-        <tr><td>2 Mar 2026 – 27 Mar 2026</td><td>Epsilon</td></tr>
-        <tr><td>6 Apr 2026 – 1 May 2026</td><td>Zeta</td></tr>
-        <tr><td>4 May 2026 – 29 May 2026</td><td>Eta</td></tr>
-        <tr><td>1 Jun 2026 – 26 Jun 2026</td><td>Theta</td></tr>
+        <tr><td>Alpha</td><td>3 Nov 2025 – 28 Nov 2025</td></tr>
+        <tr><td>Beta</td><td>1 Dec 2025 – 25 Dec 2025</td></tr>
+        <tr><td>Gamma</td><td>5 Jan 2026 – 30 Jan 2026</td></tr>
+        <tr><td>Delta</td><td>2 Feb 2026 – 27 Feb 2026</td></tr>
+        <tr><td>Epsilon</td><td>2 Mar 2026 – 27 Mar 2026</td></tr>
+        <tr><td>Zeta</td><td>6 Apr 2026 – 1 May 2026</td></tr>
+        <tr><td>Eta</td><td>4 May 2026 – 29 May 2026</td></tr>
+        <tr><td>Theta</td><td>1 Jun 2026 – 26 Jun 2026</td></tr>
       </table>
     </section>
 
     <section id="fees">
-      <h2><strong>Programme Fee</strong></h2>
+      <h2>Programme Fee</h2>
       <p>We offer two Clinical Attachment Programmes:</p>
       <ul>
         <li><strong>6-week programme – £600</strong></li>
         <li><strong>4-week programme – £500</strong></li>
       </ul>
-      <p>To secure your placement, a £100 deposit is required, with the remaining balance payable according to your chosen programme. Please note that both the deposit and final payment are non-refundable. While we are happy to accept full payment on your first day of starting the programme, this does not guarantee your placement, as allocations are made on a first-come, first-served basis.</p>
+      <p>To secure your placement, a £100 deposit is required, with the remaining balance payable according to your chosen programme. While we are happy to accept full payment on your first day of starting the programme, this does not guarantee your placement, as allocations are made on a first-come, first-served basis.</p>
     </section>
 
     <section id="contact">
@@ -273,12 +264,6 @@
 
         <button type="submit" class="btn btn-primary">Send Message</button>
       </form>
-    </section>
-
-    <section class="fine-print">
-      <p><strong>Programme Fee:</strong> A) 6-week programme for £600 B) 4-week programme for £500<br />
-      <strong>Extension:</strong> May be arranged upon mutual agreement and is subject to availability.<br />
-      <strong>Dress Code:</strong> No formal dress code is required; smart-casual and professional attire is recommended.</p>
     </section>
 
     <section class="feedback-box" aria-label="Participant Feedback">
