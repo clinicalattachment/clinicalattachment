@@ -21,19 +21,13 @@
       font-size: 2.25rem;
       border-bottom: 3px solid #005eb8;
       padding-bottom: 0.5rem;
+      text-align: center;
     }
     h2 {
       font-size: 1.5rem;
       font-weight: 600;
       margin-top: 1.75rem;
       color: #005eb8;
-    }
-    .navbar {
-      background-color: #005eb8;
-    }
-    .navbar a {
-      color: #fff !important;
-      font-weight: 500;
     }
     .container {
       max-width: 900px;
@@ -58,32 +52,33 @@
     a:hover {
       text-decoration: none;
     }
+    .home-btn {
+      display: block;
+      margin: 1rem auto 2rem auto;
+      text-align: center;
+    }
+    .home-btn a {
+      background-color: #005eb8;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .home-btn a:hover {
+      background-color: #004080;
+    }
   </style>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand text-white" href="index.html">Hoyland Medical Practice</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html#overview">Overview</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#programme-structure">Programme Structure</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#additional-features">Additional Features</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#who-should-apply">Who Should Apply?</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#documents-required">Documents Required</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#choose-cohort">Choose Your Cohort</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#programme-fee">Programme Fee</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#application-process">Application Process</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#application-form">Application Form</a></li>
-          <li class="nav-item"><a class="nav-link active" href="FAQs.html">FAQs</a></li>
-        </ul>
-      </div>
+
+  <!-- Page Title -->
+  <div class="container">
+    <h1>Clinical Attachment Programme</h1>
+    <div class="home-btn">
+      <a href="index.html">Home</a>
     </div>
-  </nav>
+  </div>
 
   <!-- Main Content -->
   <div class="container">
@@ -151,16 +146,17 @@
     <h2>Can I complete audits during my clinical attachment?</h2>
     <p>Yes. You will have allocated sessions during your attachment to complete audits.</p>
 
-    <h2>I still have questions.</h2>
-    <p>For any further queries, please email: <a href="mailto:syicb-barnsley.hoyland@nhs.net">syicb-barnsley.hoyland@nhs.net</a></p>
-
     <h2>Will I receive a reference at the end of the programme?</h2>
     <p>References are reserved for doctors who demonstrate excellence and consistently show competencies in line with GMC Good Medical Practice throughout their clinical attachment.</p>
+
+    <h2>I still have questions.</h2>
+    <p>For any further queries, please email: <a href="mailto:syicb-barnsley.hoyland@nhs.net">syicb-barnsley.hoyland@nhs.net</a></p>
   </div>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Hoyland Medical Practice. All Rights Reserved.</p>
+    <p><a href="index.html">Back to Home Page</a></p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
