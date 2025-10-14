@@ -80,70 +80,34 @@
       margin-top: 2rem;
       color: #000000;
     }
-    table.cohort-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-    table.cohort-table th, table.cohort-table td {
-      border: 1px solid #ccc;
-      padding: 0.75rem;
-    }
-    table.cohort-table th {
-      background-color: #e6eef7;
-      font-weight: 600;
-      text-align: left;
-    }
-    table.cohort-table td:first-child {
-      font-weight: 600;
-    }
-    .fine-print {
-      font-size: 0.85rem;
-      color: #333;
-      line-height: 1.4;
-      margin-top: 2rem;
-    }
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      padding: 1rem;
-    }
-    footer a {
-      margin: 0 1rem;
-      color: #005eb8;
-      text-decoration: underline;
-    }
-    .section-spacing {
-      margin-top: 2rem;
-    }
-
     /* ===== Announcement Banner Styling ===== */
     .announcement-bar {
-      background-color: #0077b6; /* NHS blue */
-      color: #ffffff;
+      background-color: #f0f4f8; /* match main page */
+      color: #000000;
+      border: 1px solid #000000; /* thin black border */
+      border-radius: 6px;
       overflow: hidden;
       white-space: nowrap;
       padding: 10px 0;
       font-weight: 600;
       font-size: 0.95rem;
       position: relative;
+      opacity: 0;
+      animation: fadeIn 1.5s forwards; /* fade in effect */
+      margin-bottom: 1.5rem;
     }
-
     .scrolling-text {
       display: inline-block;
       padding-left: 100%;
-      animation: scroll-left 25s linear infinite;
+      animation: scroll-left 45s linear infinite; /* slower scroll */
     }
-
     @keyframes scroll-left {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
     }
-
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
     .scrolling-text:hover {
       animation-play-state: paused;
     }
@@ -166,13 +130,13 @@
 
   <div class="container py-4">
 
-    <!-- ✅ Announcement Banner -->
-    <div class="announcement-bar mb-4">
+    <!-- ✅ Updated Announcement Banner -->
+    <div class="announcement-bar">
       <div class="scrolling-text">
-        We are receiving a high volume of queries every day. We will respond to each request in a timely manner. 
-        Each request will receive two follow-up responses, one week apart, 
-        to confirm your interest in joining our Clinical Attachment Programme, 
-        unless the slot has already been taken, as allocations are on a first-come, first-served basis.
+        We are receiving a high volume of queries every day. We will respond to each request in a timely manner.
+        Each request will receive two follow-up responses, one week apart, to confirm your interest in joining our
+        Clinical Attachment Programme, unless the slot has already been taken, as allocations are on a first-come,
+        first-served basis.
       </div>
     </div>
 
