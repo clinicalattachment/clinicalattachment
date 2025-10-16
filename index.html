@@ -374,16 +374,31 @@
         </div>
 
         <div class="mb-3">
-          <label class="form-label">Your Message</label>
-          <textarea class="form-control" name="message" rows="5" required></textarea>
-        </div>
+      <label class="form-label">Your Message</label>
+      <textarea class="form-control" name="message" rows="5" required></textarea>
+    </div>
 
-        <button type="submit" class="btn btn-primary">Send Message</button>
-      </form>
+    <!-- Mandatory Checkboxes -->
+    <div class="mb-3 form-check">
+      <input class="form-check-input" type="checkbox" id="awarePrimaryCare" name="awarePrimaryCare" required />
+      <label class="form-check-label" for="awarePrimaryCare">
+        I am aware that this placement is in an NHS Primary Care / Family Medicine setting, not an inpatient hospital.
+      </label>
+    </div>
 
-      <p class="mt-3"><strong>We strongly encourage applicants to review our FAQs before submitting an application.</strong></p>
-    </section>
+    <div class="mb-3 form-check">
+      <input class="form-check-input" type="checkbox" id="readFAQs" name="readFAQs" required />
+      <label class="form-check-label" for="readFAQs">
+        I have read the FAQs section before submitting this form.
+      </label>
+    </div>
 
+    <button type="submit" class="btn btn-primary">Send Message</button>
+  </form>
+
+  <p class="mt-3"><strong>We strongly encourage applicants to review our FAQs before submitting an application.</strong></p>
+</section>
+    
     <footer class="mt-4 text-center">
       <a href="https://hoylandmedicalpractice.nhs.uk/" target="_blank">Main Website</a>
       <a href="https://www.facebook.com/people/Hoyland-Medical/61572042961195/?_rdr" target="_blank">Facebook Page</a>
