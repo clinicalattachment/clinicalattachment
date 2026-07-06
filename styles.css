@@ -620,17 +620,21 @@ textarea {
 
 .reviews-carousel {
   position: relative;
-  max-width: 860px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 3.25rem;
+  padding: 0 3.6rem;
 }
 
 .reviews-track {
-  min-height: 430px;
+  min-height: 420px;
 }
 
 .review-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
+  min-height: 390px;
   border: 1px solid rgba(0, 94, 184, 0.14);
   border-radius: var(--radius);
   background: var(--white);
@@ -640,9 +644,11 @@ textarea {
 
 .review-card img {
   width: 100%;
+  max-height: 380px;
   border: 1px solid #e3e8ef;
   border-radius: 6px;
   background: var(--white);
+  object-fit: contain;
 }
 
 .review-arrow {
@@ -910,7 +916,12 @@ details p {
   }
 
   .review-card {
+    min-height: 0;
     padding: 0.45rem;
+  }
+
+  .review-card img {
+    max-height: none;
   }
 
   .review-arrow {
