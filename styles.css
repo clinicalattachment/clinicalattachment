@@ -643,7 +643,11 @@ textarea {
 }
 
 .review-card[hidden] {
-  display: none;
+  display: none !important;
+}
+
+.review-card:not(.active-review) {
+  display: none !important;
 }
 
 .review-card img {
