@@ -358,83 +358,35 @@
             </div>
 
             <div class="form-field">
-              <div class="form-field">
-  <label for="preferred-timing">Preferred Future Timing</label>
-  <select id="preferred-timing" name="preferred_timing" required>
-    <option value="">Select preference</option>
-    <option value="Next available cohort (I am available at short notice)">Next available cohort (I am available at short notice)</option>
-    <option value="Future 2027 cohort">Future 2027 cohort</option>
-    <option value="Contact me if a 2026 cancellation becomes available">Contact me about a 2026 cancellation</option>
-  </select>
-</div>
+              <label for="preferred-timing">Preferred Future Timing</label>
+              <select id="preferred-timing" name="preferred_timing" required>
+                <option value="">Select preference</option>
+                <option value="Next available cohort (I am available at short notice)">Next available cohort (I am available at short notice)</option>
+                <option value="Future 2027 cohort">Future 2027 cohort</option>
+                <option value="Contact me if a 2026 cancellation becomes available">Contact me about a 2026 cancellation</option>
+              </select>
+            </div>
 
-<div class="form-field conditional-field" id="cohort-choice-field" hidden>
-  <label for="cohort-choice">Preferred Cohort</label>
-  <select id="cohort-choice" name="preferred_2026_cohort">
-    <option value="">Select cohort</option>
-
-    <option value="Nu - 2 Nov 2026 - 27 Nov 2026">
-      Nu - 2 Nov 2026 - 27 Nov 2026
-    </option>
-
-    <option value="Xi - 1 Dec 2026 - 24 Dec 2026">
-      Xi - 1 Dec 2026 - 24 Dec 2026
-    </option>
-
-    <option value="Alpha - 4 Jan 2027 - 29 Jan 2027">
-      Alpha - 4 Jan 2027 - 29 Jan 2027
-    </option>
-
-    <option value="Beta - 1 Feb 2027 - 26 Feb 2027">
-      Beta - 1 Feb 2027 - 26 Feb 2027
-    </option>
-
-    <option value="Gamma - 1 Mar 2027 - 26 Mar 2027">
-      Gamma - 1 Mar 2027 - 26 Mar 2027
-    </option>
-
-    <option value="Delta - 5 Apr 2027 - 30 Apr 2027">
-      Delta - 5 Apr 2027 - 30 Apr 2027
-    </option>
-
-    <option value="Epsilon - 3 May 2027 - 28 May 2027">
-      Epsilon - 3 May 2027 - 28 May 2027
-    </option>
-
-    <option value="Zeta - 1 Jun 2027 - 24 Jun 2027">
-      Zeta - 1 Jun 2027 - 24 Jun 2027
-    </option>
-
-    <option value="Eta - 1 Jul 2027 - 29 Jul 2027">
-      Eta - 1 Jul 2027 - 29 Jul 2027
-    </option>
-
-    <option value="Theta - 2 Aug 2027 - 27 Aug 2027">
-      Theta - 2 Aug 2027 - 27 Aug 2027
-    </option>
-
-    <option value="Iota - 1 Sep 2027 - 28 Sep 2027">
-      Iota - 1 Sep 2027 - 28 Sep 2027
-    </option>
-
-    <option value="Kappa - 4 Oct 2027 - 29 Oct 2027">
-      Kappa - 4 Oct 2027 - 29 Oct 2027
-    </option>
-
-    <option value="Lambda - 1 Nov 2027 - 26 Nov 2027">
-      Lambda - 1 Nov 2027 - 26 Nov 2027
-    </option>
-
-    <option value="Mu - 1 Dec 2027 - 28 Dec 2027">
-      Mu - 1 Dec 2027 - 28 Dec 2027
-    </option>
-
-  </select>
-
-  <p class="field-help">
-    Select your preferred cohort.
-  </p>
-</div>
+            <div class="form-field conditional-field" id="cohort-choice-field" hidden>
+              <label for="cohort-choice">Preferred 2026 Cohort</label>
+              <select id="cohort-choice" name="preferred_2026_cohort">
+                <option value="">Select cohort</option>
+                <option value="Gamma - 5 Jan 2026 - 30 Jan 2026" disabled>Gamma - 5 Jan 2026 - 30 Jan 2026 (unavailable)</option>
+                <option value="Delta - 2 Feb 2026 - 27 Feb 2026" disabled>Delta - 2 Feb 2026 - 27 Feb 2026 (unavailable)</option>
+                <option value="Epsilon - 2 Mar 2026 - 27 Mar 2026" disabled>Epsilon - 2 Mar 2026 - 27 Mar 2026 (unavailable)</option>
+                <option value="Zeta - 6 Apr 2026 - 1 May 2026" disabled>Zeta - 6 Apr 2026 - 1 May 2026 (unavailable)</option>
+                <option value="Eta - 4 May 2026 - 29 May 2026" disabled>Eta - 4 May 2026 - 29 May 2026 (unavailable)</option>
+                <option value="Theta - 1 Jun 2026 - 26 Jun 2026" disabled>Theta - 1 Jun 2026 - 26 Jun 2026 (unavailable)</option>
+                <option value="Iota - 6 Jul 2026 - 31 Jul 2026" disabled>Iota - 6 Jul 2026 - 31 Jul 2026 (unavailable)</option>
+                <option value="Kappa - 3 Aug 2026 - 28 Aug 2026">Kappa - 3 Aug 2026 - 28 Aug 2026</option>
+                <option value="Lambda - 1 Sep 2026 - 28 Sep 2026">Lambda - 1 Sep 2026 - 28 Sep 2026</option>
+                <option value="Mu - 5 Oct 2026 - 30 Oct 2026">Mu - 5 Oct 2026 - 30 Oct 2026</option>
+                <option value="Nu - 2 Nov 2026 - 27 Nov 2026">Nu - 2 Nov 2026 - 27 Nov 2026</option>
+                <option value="Xi - 1 Dec 2026 - 28 Dec 2026">Xi - 1 Dec 2026 - 28 Dec 2026</option>
+              </select>
+              <p class="field-help">Only shown for applicants asking to be contacted if a 2026 cancellation becomes available.</p>
+            </div>
+          </div>
 
           <fieldset class="checkbox-group">
             <legend>Optional Interests</legend>
