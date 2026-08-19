@@ -146,7 +146,7 @@
             <li>Targeted support with clinical communication and NHS consultation style.</li>
             <li>Career guidance including GP training insights, CV building and interview preparation.</li>
             <li>Opportunities to attend suitable teaching sessions with GP registrars and trainers.</li>
-            <li>Assigned clinical audit or quality improvement project with potential opportunity to present at the end of the attachment</li>
+            <li>Assigned clinical audit or quality improvement project with potential opportunity to present at the end of the attachment.</li>
             <li>Accommodation signposting and local orientation support if required.</li>
           </ul>
         </div>
@@ -225,7 +225,7 @@
         <div class="section-header">
           <p class="eyebrow">Choose Your Cohort</p>
           <h2>Current cohort availability</h2>
-          <p>We offer a 4-week programme. All listed 2026 cohorts are currently full.</p>
+          <p>We offer a 4-week programme. All listed cohorts are currently full.</p>
         </div>
         <div class="panel">
           <div class="table-wrap">
@@ -277,7 +277,7 @@
             <li>Portfolio, audit or quality improvement exposure where available</li>
             <li>Feedback and certificate of attendance</li>
           </ul>
-          <p><strong>Payment:</strong> A £100 deposit is required to secure your allocated cohort. The remaining £500 balance must be paid before or on the first day of the attachment.</p>
+          <p><strong>Payment:</strong> A £100 deposit is required to secure your allocated cohort. The remaining £600 balance must be paid before or on the first day of the attachment.</p>
           <p class="notice">Fees are non-refundable once a place has been confirmed. Candidates who are unable to attend may transfer to another available cohort within 12 months, subject to availability.</p>
         </div>
       </div>
@@ -368,16 +368,16 @@
             </div>
 
             <div class="form-field conditional-field" id="cohort-choice-field" hidden>
-              <label for="cohort-choice">Preferred 2026 Cohort</label>
+              <label for="cohort-choice">Preferred 2026 Cohort (Subject to Cancellation)</label>
               <select id="cohort-choice" name="preferred_2026_cohort">
                 <option value="">Select cohort</option>
-                <option value="Gamma - 5 Jan 2026 - 30 Jan 2026" disabled>Gamma - 5 Jan 2026 - 30 Jan 2026 (unavailable)</option>
-                <option value="Delta - 2 Feb 2026 - 27 Feb 2026" disabled>Delta - 2 Feb 2026 - 27 Feb 2026 (unavailable)</option>
-                <option value="Epsilon - 2 Mar 2026 - 27 Mar 2026" disabled>Epsilon - 2 Mar 2026 - 27 Mar 2026 (unavailable)</option>
-                <option value="Zeta - 6 Apr 2026 - 1 May 2026" disabled>Zeta - 6 Apr 2026 - 1 May 2026 (unavailable)</option>
-                <option value="Eta - 4 May 2026 - 29 May 2026" disabled>Eta - 4 May 2026 - 29 May 2026 (unavailable)</option>
-                <option value="Theta - 1 Jun 2026 - 26 Jun 2026" disabled>Theta - 1 Jun 2026 - 26 Jun 2026 (unavailable)</option>
-                <option value="Iota - 6 Jul 2026 - 31 Jul 2026" disabled>Iota - 6 Jul 2026 - 31 Jul 2026 (unavailable)</option>
+                <option value="Gamma - 5 Jan 2026 - 30 Jan 2026">Gamma - 5 Jan 2026 - 30 Jan 2026</option>
+                <option value="Delta - 2 Feb 2026 - 27 Feb 2026">Delta - 2 Feb 2026 - 27 Feb 2026</option>
+                <option value="Epsilon - 2 Mar 2026 - 27 Mar 2026">Epsilon - 2 Mar 2026 - 27 Mar 2026</option>
+                <option value="Zeta - 6 Apr 2026 - 1 May 2026">Zeta - 6 Apr 2026 - 1 May 2026</option>
+                <option value="Eta - 4 May 2026 - 29 May 2026">Eta - 4 May 2026 - 29 May 2026</option>
+                <option value="Theta - 1 Jun 2026 - 26 Jun 2026">Theta - 1 Jun 2026 - 26 Jun 2026</option>
+                <option value="Iota - 6 Jul 2026 - 31 Jul 2026">Iota - 6 Jul 2026 - 31 Jul 2026</option>
                 <option value="Kappa - 3 Aug 2026 - 28 Aug 2026">Kappa - 3 Aug 2026 - 28 Aug 2026</option>
                 <option value="Lambda - 1 Sep 2026 - 28 Sep 2026">Lambda - 1 Sep 2026 - 28 Sep 2026</option>
                 <option value="Mu - 5 Oct 2026 - 30 Oct 2026">Mu - 5 Oct 2026 - 30 Oct 2026</option>
@@ -453,11 +453,11 @@
 
           <button class="review-arrow review-arrow-next" type="button" aria-label="Next review">›</button>
 
-          <div class="review-status" aria-hidden="true">
-            <span class="active-dot"></span>
-            <span></span>
-            <span></span>
-            <span></span>
+          <div class="review-status" aria-label="Review pagination">
+            <button type="button" class="dot-btn active-dot" aria-label="Go to review 1"></button>
+            <button type="button" class="dot-btn" aria-label="Go to review 2"></button>
+            <button type="button" class="dot-btn" aria-label="Go to review 3"></button>
+            <button type="button" class="dot-btn" aria-label="Go to review 4"></button>
           </div>
         </div>
       </div>
@@ -497,7 +497,7 @@
 
     const reviewCarousel = document.querySelector(".reviews-carousel");
     const reviewCards = [...document.querySelectorAll("[data-review]")];
-    const reviewDots = [...document.querySelectorAll(".review-status span")];
+    const reviewDots = [...document.querySelectorAll(".review-status .dot-btn")];
     const previousReview = document.querySelector(".review-arrow-prev");
     const nextReview = document.querySelector(".review-arrow-next");
     let currentReview = 0;
@@ -534,6 +534,14 @@
         showReview(currentReview + 1);
         resetReviewTimer();
       });
+
+      reviewDots.forEach((dot, idx) => {
+        dot.addEventListener("click", () => {
+          showReview(idx);
+          resetReviewTimer();
+        });
+      });
+
       reviewCarousel.addEventListener("mouseenter", () => window.clearInterval(reviewTimer));
       reviewCarousel.addEventListener("mouseleave", startReviewTimer);
       reviewCarousel.addEventListener("focusin", () => window.clearInterval(reviewTimer));
