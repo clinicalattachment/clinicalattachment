@@ -4,41 +4,137 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A structured 4-week NHS primary care observership in South Yorkshire for International Medical Graduates seeking exposure to UK general practice, NHS systems and clinical communication.">
-  <title>Clinical Attachment Programme for International Medical Graduates</title>
+  <title>Clinical Attachment Programme for International Medical Graduates - 2027</title>
   <link rel="preconnect" href="https://raw.githubusercontent.com">
   <link rel="stylesheet" href="styles.css?v=reviews-3">
   
   <style>
     /* 
-      تمت إضافة هذا الكود البرمجي لحل مشكلة تمدد النص وتوسيط الصفحة 
-      Fix for text wrap, page centralization, and edge-touching issues 
+      Fix for text wrap, page centralization, and uniform form styling
     */
-    
     *, *::before, *::after {
-      box-sizing: border-box; /* يمنع زيادة حجم العناصر عند إضافة هوامش داخلية */
+      box-sizing: border-box;
     }
     
     body {
       margin: 0;
       padding: 0;
-      overflow-x: hidden; /* يمنع ظهور شريط التمرير العرضي المزعج */
+      overflow-x: hidden;
     }
     
     .container {
       width: 100%;
-      max-width: 1100px !important; /* يحدد أقصى عرض للمحتوى حتى ما ينفرش على الشاشات الكبيرة */
-      margin: 0 auto !important; /* يوسط المحتوى تلقائياً بمنتصف الشاشة */
-      padding: 0 20px !important; /* يعطي مسافة أمان من الجوانب حتى النص ما يطخ بالحافة بالموبايل */
+      max-width: 1100px !important;
+      margin: 0 auto !important;
+      padding: 0 20px !important;
     }
     
     .container.narrow {
-      max-width: 800px !important; /* يخلي قسم النصوص أضيق لسهولة القراءة وتتبع الأسطر */
+      max-width: 800px !important;
     }
     
-    /* لضمان أن الصور لا تتجاوز حدود الحاوية وتخرب التصميم */
     img {
       max-width: 100%;
       height: auto;
+    }
+
+    /* Hero Section Adjustments */
+    .hero-content {
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    #hero-title {
+      font-size: clamp(1.8rem, 4vw + 1rem, 3.2rem);
+      line-height: 1.25;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      margin: 0 auto 20px auto;
+      max-width: 100%;
+    }
+
+    .hero-lede {
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      line-height: 1.6;
+    }
+
+    .availability-note {
+      background-color: #e8f4fd;
+      border-left: 4px solid #005eb8;
+      padding: 14px 18px;
+      border-radius: 4px;
+      margin: 20px auto;
+      max-width: 800px;
+      text-align: left;
+      font-size: 1.05rem;
+      color: #0b0c0c;
+    }
+
+    /* Uniform Form Styling */
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .form-field label {
+      font-weight: 600;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      color: #212b32;
+    }
+
+    .form-field input[type="text"],
+    .form-field input[type="email"],
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      height: 48px;
+      padding: 10px 14px;
+      border: 1.5px solid #aeb7bd;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-family: inherit;
+      background-color: #ffffff;
+      color: #212b32;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form-field select {
+      cursor: pointer;
+    }
+
+    .form-field textarea {
+      height: auto;
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      outline: none;
+      border-color: #005eb8;
+      box-shadow: 0 0 0 3px rgba(0, 94, 184, 0.2);
+    }
+
+    .status-pill.available {
+      background-color: #d4edda;
+      color: #155724;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-block;
     }
   </style>
 </head>
@@ -53,7 +149,7 @@
       <nav class="header-nav" aria-label="Primary navigation">
         <a href="#cohorts">Cohorts</a>
         <a href="FAQs.html">FAQs</a>
-        <a class="nav-button" href="#application-form">Enquire</a>
+        <a class="nav-button" href="#application-form">Apply Now</a>
       </nav>
     </div>
   </header>
@@ -64,10 +160,12 @@
         <h1 id="hero-title">NHS GP (Family Medicine) Clinical Attachment Programme for IMGs</h1>
         <p class="hero-lede">A structured 4-week NHS primary care observership in South Yorkshire, designed for IMGs seeking first-hand exposure to UK general practice, NHS systems, clinical communication, documentation and career development.</p>
 
-        <p class="availability-note" role="status"><strong>Please note:</strong> the 2026 programme is fully booked. We are currently at full capacity for January-December 2026, but you can still register your interest for future cohorts and receive updates if spaces become available.</p>
+        <div class="availability-note" role="status">
+          <strong>Applications Open:</strong> We are now accepting applications for all <strong>2027 cohorts (January - December 2027)</strong>. Spaces are strictly limited to a maximum of 2 doctors per cohort to ensure dedicated supervision.
+        </div>
 
         <div class="hero-actions" aria-label="Main actions">
-          <a class="button button-primary" href="#application-form">Join future cohort list</a>
+          <a class="button button-primary" href="#application-form">Apply for 2027 Cohort</a>
         </div>
       </div>
 
@@ -99,7 +197,7 @@
             <li><a href="#governance">Governance and Professional Standards</a></li>
             <li><a href="#applicants">Who Should Apply?</a></li>
             <li><a href="#documents">Documents Required</a></li>
-            <li><a href="#cohorts">Choose Your Cohort</a></li>
+            <li><a href="#cohorts">Choose Your 2027 Cohort</a></li>
             <li><a href="#fees">Programme Fee</a></li>
             <li><a href="#cancellations">Cancellations</a></li>
             <li><a href="#application-process">Application Process</a></li>
@@ -164,7 +262,7 @@
             <li>Personalised feedback tailored to your strengths and areas for improvement</li>
           </ul>
           <p class="price-line"><strong>Cost:</strong> £50 per 90-minute session</p>
-          <p>This optional add-on provides focused, expert guidance to support your PLAB 2 preparation alongside your clinical attachment experience. Candidates should indicate their interest early during the attachment, as sessions are subject to availability.</p>
+          <p>This optional add-on provides focused, expert guidance to support your PLAB 2 preparation alongside your clinical attachment experience. Candidates should indicate their interest in their application, as sessions are subject to availability.</p>
         </div>
       </div>
     </section>
@@ -239,7 +337,7 @@
           <h2>Documents usually requested before a confirmed placement</h2>
         </div>
         <div class="panel">
-          <p>If a suitable place becomes available, candidates may be asked to provide the following documents before the attachment begins:</p>
+          <p>Once your application is reviewed, shortlisted candidates will be asked to provide the following documents:</p>
           <ul class="check-list two-column-list">
             <li>Passport</li>
             <li>Visa or evidence of right to visit the UK, if applicable</li>
@@ -258,13 +356,13 @@
       <div class="container narrow">
         <div class="section-header">
           <p class="eyebrow">Choose Your Cohort</p>
-          <h2>Current cohort availability</h2>
-          <p>We offer a 4-week programme. All listed cohorts are currently full.</p>
+          <h2>2027 Cohort Availability</h2>
+          <p>We offer a structured 4-week programme. Applications are open for all 2027 cohorts listed below:</p>
         </div>
         <div class="panel">
           <div class="table-wrap">
             <table>
-              <caption>Listed clinical attachment cohorts</caption>
+              <caption>Listed 2027 clinical attachment cohorts</caption>
               <thead>
                 <tr>
                   <th scope="col">Cohort Name</th>
@@ -273,20 +371,18 @@
                 </tr>
               </thead>
               <tbody>
-                <tr><td><del>Alpha</del></td><td><del>3 Nov 2025 - 28 Nov 2025</del></td><td><span class="status-pill">Full</span></td></tr>
-                <tr><td><del>Beta</del></td><td><del>1 Dec 2025 - 25 Dec 2025</del></td><td><span class="status-pill">Full</span></td></tr>
-                <tr><td><del>Gamma</del></td><td><del>5 Jan 2026 - 30 Jan 2026</del></td><td><span class="status-pill">Full</span></td></tr>
-                <tr><td><del>Delta</del></td><td><del>2 Feb 2026 - 27 Feb 2026</del></td><td><span class="status-pill">Full</span></td></tr>
-                <tr><td><del>Epsilon</del></td><td><del>2 Mar 2026 - 27 Mar 2026</del></td><td><span class="status-pill">Full</span></td></tr>
-                <tr><td><del>Zeta</del></td><td><del>6 Apr 2026 - 1 May 2026</del></td><td><span class="status-pill">Full</span></td></tr>
-                <tr><td><del>Eta</del></td><td><del>4 May 2026 - 29 May 2026</del></td><td><span class="status-pill">Full</span></td></tr>
-                <tr><td><del>Theta</del></td><td><del>1 Jun 2026 - 26 Jun 2026</del></td><td><span class="status-pill">Full</span></td></tr>
-                <tr><td><del>Iota</del></td><td><del>6 Jul 2026 - 31 Jul 2026</del></td><td><span class="status-pill">Full</span></td></tr>
-                <tr><td><del>Kappa</del></td><td><del>3 Aug 2026 - 28 Aug 2026</del></td><td><span class="status-pill">Full</span></td></tr>
-                <tr><td><del>Lambda</del></td><td><del>1 Sep 2026 - 28 Sep 2026</del></td><td><span class="status-pill">Full</span></td></tr>
-                <tr><td><del>Mu</del></td><td><del>5 Oct 2026 - 30 Oct 2026</del></td><td><span class="status-pill">Full</span></td></tr>
-                <tr><td><del>Nu</del></td><td><del>2 Nov 2026 - 27 Nov 2026</del></td><td><span class="status-pill">Full</span></td></tr>
-                <tr><td><del>Xi</del></td><td><del>1 Dec 2026 - 28 Dec 2026</del></td><td><span class="status-pill">Full</span></td></tr>
+                <tr><td>Alpha</td><td>4 Jan 2027 - 29 Jan 2027</td><td><span class="status-pill available">Available</span></td></tr>
+                <tr><td>Beta</td><td>1 Feb 2027 - 26 Feb 2027</td><td><span class="status-pill available">Available</span></td></tr>
+                <tr><td>Gamma</td><td>1 Mar 2027 - 26 Mar 2027</td><td><span class="status-pill available">Available</span></td></tr>
+                <tr><td>Delta</td><td>5 Apr 2027 - 30 Apr 2027</td><td><span class="status-pill available">Available</span></td></tr>
+                <tr><td>Epsilon</td><td>3 May 2027 - 28 May 2027</td><td><span class="status-pill available">Available</span></td></tr>
+                <tr><td>Zeta</td><td>1 Jun 2027 - 24 Jun 2027</td><td><span class="status-pill available">Available</span></td></tr>
+                <tr><td>Eta</td><td>1 Jul 2027 - 29 Jul 2027</td><td><span class="status-pill available">Available</span></td></tr>
+                <tr><td>Theta</td><td>2 Aug 2027 - 27 Aug 2027</td><td><span class="status-pill available">Available</span></td></tr>
+                <tr><td>Iota</td><td>1 Sep 2027 - 28 Sep 2027</td><td><span class="status-pill available">Available</span></td></tr>
+                <tr><td>Kappa</td><td>4 Oct 2027 - 29 Oct 2027</td><td><span class="status-pill available">Available</span></td></tr>
+                <tr><td>Lambda</td><td>1 Nov 2027 - 26 Nov 2027</td><td><span class="status-pill available">Available</span></td></tr>
+                <tr><td>Mu</td><td>1 Dec 2027 - 28 Dec 2027</td><td><span class="status-pill available">Available</span></td></tr>
               </tbody>
             </table>
           </div>
@@ -311,7 +407,7 @@
             <li>Portfolio, audit or quality improvement exposure where available</li>
             <li>Feedback and certificate of attendance</li>
           </ul>
-          <p><strong>Payment:</strong> A £100 deposit is required to secure your allocated cohort. The remaining £600 balance must be paid before or on the first day of the attachment.</p>
+          <p><strong>Payment:</strong> A £100 deposit is required to secure your allocated cohort once accepted. The remaining £600 balance must be paid before or on the first day of the attachment.</p>
           <p class="notice">Fees are non-refundable once a place has been confirmed. Candidates who are unable to attend may transfer to another available cohort within 12 months, subject to availability.</p>
         </div>
       </div>
@@ -325,7 +421,7 @@
         </div>
         <div class="panel">
           <p>If you are unable to attend your allocated cohort or wish to withdraw your application, please notify us by emailing <a href="mailto:syicb-barnsley.hoyland@nhs.net">syicb-barnsley.hoyland@nhs.net</a>.</p>
-          <p class="notice">Please note: any fees paid are non-refundable, but candidates can avail of another cohort in the next 12 months, subject to availability.</p>
+          <p class="notice">Please note: any fees paid are non-refundable, but candidates can transfer to another available cohort within the next 12 months, subject to availability.</p>
         </div>
       </div>
     </section>
@@ -334,15 +430,15 @@
       <div class="container narrow">
         <div class="section-header">
           <p class="eyebrow">Application Process</p>
-          <h2>How future interest is handled while 2026 is full</h2>
+          <h2>How to Apply for 2027 Cohorts</h2>
         </div>
         <div class="panel">
           <ol class="process-list">
-            <li><strong>Register interest:</strong> complete the form below so the practice can record your details.</li>
-            <li><strong>Availability review:</strong> if a place becomes available, the team will contact suitable candidates with next steps.</li>
-            <li><strong>Submit documents:</strong> shortlisted candidates may be asked to provide the required documents for review.</li>
-            <li><strong>Secure placement:</strong> if offered a place, a £100 deposit is required to secure the allocated cohort.</li>
-            <li><strong>Induction and start:</strong> timetable and induction details will be shared before the attachment begins.</li>
+            <li><strong>Select & Apply:</strong> Complete the online application form below selecting your preferred 2027 cohort.</li>
+            <li><strong>Application Review:</strong> The practice team will review your application details.</li>
+            <li><strong>Submit Documents:</strong> Shortlisted candidates will be invited to submit their documents for verification.</li>
+            <li><strong>Secure Placement:</strong> Once accepted, a £100 deposit secures your placement in the chosen cohort.</li>
+            <li><strong>Induction & Start:</strong> Induction materials, timetable and details will be shared prior to your start date.</li>
           </ol>
         </div>
       </div>
@@ -352,24 +448,24 @@
       <div class="container narrow">
         <div class="section-header form-header">
           <p class="eyebrow">Online Application Form</p>
-          <h2>Register interest for future cohorts</h2>
-          <p class="form-intro-note">The 2026 programme is fully booked. Please use this form to join the waiting list or register interest in future clinical attachment cohorts. This form does not guarantee a place.</p>
+          <h2>Apply for 2027 Clinical Attachment</h2>
+          <p class="form-intro-note">Please complete the form below to apply for your preferred 2027 cohort. All applications are reviewed by the practice team.</p>
         </div>
 
         <form class="interest-form" action="https://formsubmit.co/syicb-barnsley.hoyland@nhs.net" method="POST">
           <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_subject" value="Clinical Attachment Future Cohort Interest">
+          <input type="hidden" name="_subject" value="Clinical Attachment 2027 Cohort Application">
           <input type="hidden" name="_next" value="https://www.clinicalattachment.com/thankyou.html">
 
           <div class="form-grid">
             <div class="form-field">
               <label for="name">Full Name</label>
-              <input id="name" type="text" name="name" autocomplete="name" required>
+              <input id="name" type="text" name="name" autocomplete="name" required placeholder="Dr. Full Name">
             </div>
 
             <div class="form-field">
               <label for="email">Email Address</label>
-              <input id="email" type="email" name="email" autocomplete="email" required>
+              <input id="email" type="email" name="email" autocomplete="email" required placeholder="doctor@example.com">
             </div>
 
             <div class="form-field">
@@ -384,41 +480,30 @@
             <div class="form-field">
               <label for="gmc-status">GMC Registration Status</label>
               <select id="gmc-status" name="gmc_status" required>
-                <option value="">Select status</option>
+                <option value="">Select GMC status</option>
                 <option value="GMC registered">GMC registered</option>
                 <option value="GMC registration in progress">GMC registration in progress</option>
                 <option value="Not currently GMC registered">Not currently GMC registered</option>
               </select>
             </div>
 
-            <div class="form-field">
-              <label for="preferred-timing">Preferred Future Timing</label>
-              <select id="preferred-timing" name="preferred_timing" required>
-                <option value="">Select preference</option>
-                <option value="Next available cohort (I am available at short notice)">Next available cohort (I am available at short notice)</option>
-                <option value="Future 2027 cohort">Future 2027 cohort</option>
-                <option value="Contact me if a 2026 cancellation becomes available">Contact me about a 2026 cancellation</option>
+            <div class="form-field" style="grid-column: 1 / -1;">
+              <label for="cohort-choice">Preferred 2027 Cohort</label>
+              <select id="cohort-choice" name="preferred_2027_cohort" required>
+                <option value="">Select your preferred cohort</option>
+                <option value="Alpha: 4 Jan 2027 - 29 Jan 2027">Alpha (4 Jan 2027 - 29 Jan 2027)</option>
+                <option value="Beta: 1 Feb 2027 - 26 Feb 2027">Beta (1 Feb 2027 - 26 Feb 2027)</option>
+                <option value="Gamma: 1 Mar 2027 - 26 Mar 2027">Gamma (1 Mar 2027 - 26 Mar 2027)</option>
+                <option value="Delta: 5 Apr 2027 - 30 Apr 2027">Delta (5 Apr 2027 - 30 Apr 2027)</option>
+                <option value="Epsilon: 3 May 2027 - 28 May 2027">Epsilon (3 May 2027 - 28 May 2027)</option>
+                <option value="Zeta: 1 Jun 2027 - 24 Jun 2027">Zeta (1 Jun 2027 - 24 Jun 2027)</option>
+                <option value="Eta: 1 Jul 2027 - 29 Jul 2027">Eta (1 Jul 2027 - 29 Jul 2027)</option>
+                <option value="Theta: 2 Aug 2027 - 27 Aug 2027">Theta (2 Aug 2027 - 27 Aug 2027)</option>
+                <option value="Iota: 1 Sep 2027 - 28 Sep 2027">Iota (1 Sep 2027 - 28 Sep 2027)</option>
+                <option value="Kappa: 4 Oct 2027 - 29 Oct 2027">Kappa (4 Oct 2027 - 29 Oct 2027)</option>
+                <option value="Lambda: 1 Nov 2027 - 26 Nov 2027">Lambda (1 Nov 2027 - 26 Nov 2027)</option>
+                <option value="Mu: 1 Dec 2027 - 28 Dec 2027">Mu (1 Dec 2027 - 28 Dec 2027)</option>
               </select>
-            </div>
-
-            <div class="form-field conditional-field" id="cohort-choice-field" hidden>
-              <label for="cohort-choice">Preferred 2026 Cohort (Subject to Cancellation)</label>
-              <select id="cohort-choice" name="preferred_2026_cohort">
-                <option value="">Select cohort</option>
-                <option value="Gamma - 5 Jan 2026 - 30 Jan 2026">Gamma - 5 Jan 2026 - 30 Jan 2026</option>
-                <option value="Delta - 2 Feb 2026 - 27 Feb 2026">Delta - 2 Feb 2026 - 27 Feb 2026</option>
-                <option value="Epsilon - 2 Mar 2026 - 27 Mar 2026">Epsilon - 2 Mar 2026 - 27 Mar 2026</option>
-                <option value="Zeta - 6 Apr 2026 - 1 May 2026">Zeta - 6 Apr 2026 - 1 May 2026</option>
-                <option value="Eta - 4 May 2026 - 29 May 2026">Eta - 4 May 2026 - 29 May 2026</option>
-                <option value="Theta - 1 Jun 2026 - 26 Jun 2026">Theta - 1 Jun 2026 - 26 Jun 2026</option>
-                <option value="Iota - 6 Jul 2026 - 31 Jul 2026">Iota - 6 Jul 2026 - 31 Jul 2026</option>
-                <option value="Kappa - 3 Aug 2026 - 28 Aug 2026">Kappa - 3 Aug 2026 - 28 Aug 2026</option>
-                <option value="Lambda - 1 Sep 2026 - 28 Sep 2026">Lambda - 1 Sep 2026 - 28 Sep 2026</option>
-                <option value="Mu - 5 Oct 2026 - 30 Oct 2026">Mu - 5 Oct 2026 - 30 Oct 2026</option>
-                <option value="Nu - 2 Nov 2026 - 27 Nov 2026">Nu - 2 Nov 2026 - 27 Nov 2026</option>
-                <option value="Xi - 1 Dec 2026 - 28 Dec 2026">Xi - 1 Dec 2026 - 28 Dec 2026</option>
-              </select>
-              <p class="field-help">Only shown for applicants asking to be contacted if a 2026 cancellation becomes available.</p>
             </div>
           </div>
 
@@ -431,8 +516,8 @@
           </fieldset>
 
           <div class="form-field">
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" rows="5" required placeholder="Please include your learning aims, preferred dates or any relevant background."></textarea>
+            <label for="message">Your Message & Learning Aims</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Please summarise your clinical experience, learning aims and reasons for applying."></textarea>
           </div>
 
           <fieldset class="checkbox-group">
@@ -451,7 +536,7 @@
             </label>
           </fieldset>
 
-          <button class="button button-primary form-button" type="submit">Submit enquiry</button>
+          <button class="button button-primary form-button" type="submit">Submit Application</button>
         </form>
       </div>
     </section>
@@ -508,27 +593,11 @@
       </nav>
     </div>
     <div class="container footer-copyright">
-      <p>© 2026 Hoyland Medical Practice. All Rights Reserved.</p>
+      <p>© 2027 Hoyland Medical Practice. All Rights Reserved.</p>
     </div>
   </footer>
 
   <script>
-    const preferredTiming = document.getElementById("preferred-timing");
-    const cohortField = document.getElementById("cohort-choice-field");
-    const cohortSelect = document.getElementById("cohort-choice");
-
-    function updateCohortField() {
-      const showCohorts = preferredTiming.value === "Contact me if a 2026 cancellation becomes available";
-      cohortField.hidden = !showCohorts;
-      cohortSelect.required = showCohorts;
-      if (!showCohorts) {
-        cohortSelect.value = "";
-      }
-    }
-
-    preferredTiming.addEventListener("change", updateCohortField);
-    updateCohortField();
-
     const reviewCarousel = document.querySelector(".reviews-carousel");
     const reviewCards = [...document.querySelectorAll("[data-review]")];
     const reviewDots = [...document.querySelectorAll(".review-status .dot-btn")];
