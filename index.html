@@ -7,6 +7,40 @@
   <title>Clinical Attachment Programme for International Medical Graduates</title>
   <link rel="preconnect" href="https://raw.githubusercontent.com">
   <link rel="stylesheet" href="styles.css?v=reviews-3">
+  
+  <style>
+    /* 
+      تمت إضافة هذا الكود البرمجي لحل مشكلة تمدد النص وتوسيط الصفحة 
+      Fix for text wrap, page centralization, and edge-touching issues 
+    */
+    
+    *, *::before, *::after {
+      box-sizing: border-box; /* يمنع زيادة حجم العناصر عند إضافة هوامش داخلية */
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden; /* يمنع ظهور شريط التمرير العرضي المزعج */
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1100px !important; /* يحدد أقصى عرض للمحتوى حتى ما ينفرش على الشاشات الكبيرة */
+      margin: 0 auto !important; /* يوسط المحتوى تلقائياً بمنتصف الشاشة */
+      padding: 0 20px !important; /* يعطي مسافة أمان من الجوانب حتى النص ما يطخ بالحافة بالموبايل */
+    }
+    
+    .container.narrow {
+      max-width: 800px !important; /* يخلي قسم النصوص أضيق لسهولة القراءة وتتبع الأسطر */
+    }
+    
+    /* لضمان أن الصور لا تتجاوز حدود الحاوية وتخرب التصميم */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
