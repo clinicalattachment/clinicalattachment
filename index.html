@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="styles.css?v=reviews-3">
   
   <style>
+    /* 
+      Fix for text wrap, page centralization, and uniform form styling
+    */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -35,12 +38,14 @@
       height: auto;
     }
 
+    /* Hero Section Adjustments */
     .hero-content {
       text-align: center;
       padding-top: 40px;
       padding-bottom: 40px;
     }
 
+    /* Fix for the Hero Title clipping issue */
     #hero-title {
       font-size: clamp(1.8rem, 4vw + 1rem, 3.2rem);
       line-height: 1.3;
@@ -70,10 +75,12 @@
       color: #0b0c0c;
     }
 
+    /* Fix for the invisible white <strong> text in the light blue box */
     .availability-note strong {
       color: #0b0c0c !important;
     }
 
+    /* Uniform Form Styling */
     .form-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -113,6 +120,11 @@
     .form-field select {
       cursor: pointer;
     }
+    
+    .form-field select option:disabled {
+      color: #999;
+      background-color: #f5f5f5;
+    }
 
     .form-field textarea {
       height: auto;
@@ -128,6 +140,7 @@
       box-shadow: 0 0 0 3px rgba(0, 94, 184, 0.2);
     }
 
+    /* Status Pills */
     .status-pill {
       padding: 4px 10px;
       border-radius: 12px;
@@ -493,20 +506,9 @@
 
             <div class="form-field" style="grid-column: 1 / -1;">
               <label for="cohort-choice">Preferred 2027 Cohort</label>
+              <!-- تم تعديل القائمة لتكون ديناميكية وتتغذى من الجوجل شيت مباشرة -->
               <select id="cohort-choice" name="preferred_2027_cohort" required>
-                <option value="">Select your preferred cohort</option>
-                <option value="Alpha: 4 Jan 2027 - 29 Jan 2027">Alpha (4 Jan 2027 - 29 Jan 2027)</option>
-                <option value="Beta: 1 Feb 2027 - 26 Feb 2027">Beta (1 Feb 2027 - 26 Feb 2027)</option>
-                <option value="Gamma: 1 Mar 2027 - 26 Mar 2027">Gamma (1 Mar 2027 - 26 Mar 2027)</option>
-                <option value="Delta: 5 Apr 2027 - 30 Apr 2027">Delta (5 Apr 2027 - 30 Apr 2027)</option>
-                <option value="Epsilon: 3 May 2027 - 28 May 2027">Epsilon (3 May 2027 - 28 May 2027)</option>
-                <option value="Zeta: 1 Jun 2027 - 24 Jun 2027">Zeta (1 Jun 2027 - 24 Jun 2027)</option>
-                <option value="Eta: 1 Jul 2027 - 29 Jul 2027">Eta (1 Jul 2027 - 29 Jul 2027)</option>
-                <option value="Theta: 2 Aug 2027 - 27 Aug 2027">Theta (2 Aug 2027 - 27 Aug 2027)</option>
-                <option value="Iota: 1 Sep 2027 - 28 Sep 2027">Iota (1 Sep 2027 - 28 Sep 2027)</option>
-                <option value="Kappa: 4 Oct 2027 - 29 Oct 2027">Kappa (4 Oct 2027 - 29 Oct 2027)</option>
-                <option value="Lambda: 1 Nov 2027 - 26 Nov 2027">Lambda (1 Nov 2027 - 26 Nov 2027)</option>
-                <option value="Mu: 1 Dec 2027 - 28 Dec 2027">Mu (1 Dec 2027 - 28 Dec 2027)</option>
+                <option value="">Loading cohorts...</option>
               </select>
             </div>
           </div>
@@ -602,17 +604,22 @@
   </footer>
 
   <script>
+    // === كود سحب البيانات وتحديث الجدول والفورم تلقائياً ===
     async function fetchCohorts() {
       const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT02tM1Z-zPhEfPEz8UtPHIpCnem7BfDujuvKFHkEW_PWV8BNACGRHN6zbtUDksfQy_GhYXcxLnaugT/pub?output=csv';
       
       const tbody = document.getElementById('dynamic-cohorts-body');
+      const cohortSelect = document.getElementById('cohort-choice');
 
       try {
         const response = await fetch(sheetUrl);
         const data = await response.text();
 
         const rows = data.split('\n').map(row => row.split(','));
+        
+        // تفريغ الجدول وقائمة الاختيارات قبل ملئها بالبيانات الجديدة
         tbody.innerHTML = ''; 
+        cohortSelect.innerHTML = '<option value="">Select your preferred cohort</option>';
 
         for (let i = 1; i < rows.length; i++) {
           if (rows[i].length >= 3 && rows[i][0].trim() !== '') {
@@ -620,6 +627,7 @@
             const dates = rows[i][1].trim();
             const status = rows[i][2].trim();
 
+            // 1. بناء الجدول
             let statusHtml = '';
             if (status.toLowerCase() === 'available') {
               statusHtml = '<span class="status-pill available">Available</span>';
@@ -635,16 +643,35 @@
               tr.innerHTML = `<td>${name}</td><td>${dates}</td><td>${statusHtml}</td>`;
             }
             tbody.appendChild(tr);
+
+            // 2. بناء قائمة الخيارات (Dropdown) للفورم
+            const option = document.createElement('option');
+            const optionValue = `${name}: ${dates}`;
+            
+            if (status.toLowerCase() === 'available') {
+              option.value = optionValue;
+              option.textContent = optionValue;
+            } else {
+              // إذا كان ممتلئ، يظهر بالقائمة بس مقفول ما ينگدر ينضغط
+              option.value = optionValue;
+              option.textContent = `${optionValue} (${status})`;
+              option.disabled = true;
+            }
+            cohortSelect.appendChild(option);
           }
         }
       } catch (error) {
         tbody.innerHTML = '<tr><td colspan="3" class="loading-text" style="color: red;">Unable to load data. Please refresh the page.</td></tr>';
+        cohortSelect.innerHTML = '<option value="">Error loading cohorts</option>';
         console.error('Error fetching Google Sheet:', error);
       }
     }
 
+    // تشغيل الدالة أول ما تفتح الصفحة
     fetchCohorts();
 
+
+    // === كود الكاروسيل للتقييمات ===
     const reviewCarousel = document.querySelector(".reviews-carousel");
     const reviewCards = [...document.querySelectorAll("[data-review]")];
     const reviewDots = [...document.querySelectorAll(".review-status .dot-btn")];
