@@ -5,13 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A structured 4-week NHS primary care observership in South Yorkshire for International Medical Graduates seeking exposure to UK general practice, NHS systems and clinical communication.">
   <title>Clinical Attachment Programme for International Medical Graduates - 2027</title>
+  
+  <!-- Open Graph Meta Tags for Social Media Sharing (Facebook, WhatsApp, LinkedIn) -->
+  <meta property="og:title" content="NHS GP Clinical Attachment Programme for IMGs - 2027">
+  <meta property="og:description" content="A structured 4-week NHS primary care observership in South Yorkshire, designed for IMGs seeking first-hand exposure to UK general practice and NHS systems.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/clinicalattachment/clinicalattachment/main/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.clinicalattachment.com/">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NHS GP Clinical Attachment Programme for IMGs - 2027">
+  <meta name="twitter:description" content="A structured 4-week NHS primary care observership in South Yorkshire for International Medical Graduates. Apply now for 2027 cohorts.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/clinicalattachment/clinicalattachment/main/logo.png">
+
   <link rel="preconnect" href="https://raw.githubusercontent.com">
   <link rel="stylesheet" href="styles.css?v=reviews-3">
   
   <style>
     /* 
-      Fix for text wrap, page centralization, and uniform form styling
+      Fix for text wrap, page centralization, uniform form styling, and smooth scrolling
     */
+    html {
+      scroll-behavior: smooth; /* يخلي حركة الصعود والنزول بالموقع ناعمة ومريحة للعين */
+    }
+
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -20,6 +38,7 @@
       margin: 0;
       padding: 0;
       overflow-x: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
     
     .container {
@@ -161,6 +180,32 @@
       padding: 20px;
       font-style: italic;
       color: #555;
+    }
+
+    /* Back to Top Button Styles */
+    #backToTopBtn {
+      display: none; /* مخفي بالبداية لحد ما المستخدم ينزل جوة */
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #005eb8;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    #backToTopBtn:hover {
+      background-color: #004080;
+      transform: scale(1.1); /* يكبر شوية من تخلي الماوس عليه */
     }
   </style>
 </head>
@@ -506,7 +551,7 @@
 
             <div class="form-field" style="grid-column: 1 / -1;">
               <label for="cohort-choice">Preferred 2027 Cohort</label>
-              <!-- تم تعديل القائمة لتكون ديناميكية وتتغذى من الجوجل شيت مباشرة -->
+              <!-- القائمة تتغذى من الجوجل شيت مباشرة -->
               <select id="cohort-choice" name="preferred_2027_cohort" required>
                 <option value="">Loading cohorts...</option>
               </select>
@@ -602,6 +647,9 @@
       <p>© 2027 Hoyland Medical Practice. All Rights Reserved.</p>
     </div>
   </footer>
+
+  <!-- زر العودة للأعلى (Back to Top Button) -->
+  <button id="backToTopBtn" title="Go to top">↑</button>
 
   <script>
     // === كود سحب البيانات وتحديث الجدول والفورم تلقائياً ===
@@ -725,6 +773,26 @@
       reviewCarousel.addEventListener("focusout", startReviewTimer);
       startReviewTimer();
     }
+
+    // === كود زر العودة للأعلى ===
+    let topButton = document.getElementById("backToTopBtn");
+
+    // إظهار الزر لمن المستخدم ينزل 300 بكسل لي جوة
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        topButton.style.display = "block";
+      } else {
+        topButton.style.display = "none";
+      }
+    };
+
+    // الصعود للأعلى لمن ينضغط الزر
+    topButton.addEventListener("click", function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
   </script>
 </body>
 </html>
