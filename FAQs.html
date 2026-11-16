@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,8 +7,55 @@
   <meta name="description" content="Frequently asked questions for the Clinical Attachment Programme for International Medical Graduates at Hoyland Medical Practice.">
   <title>FAQs | Clinical Attachment Programme</title>
   <link rel="stylesheet" href="styles.css?v=reviews-3">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    .faq-page .container {
+      width: 100%;
+      max-width: 1100px !important;
+      margin: 0 auto !important;
+      padding: 0 20px !important;
+    }
+
+    .faq-page .compact-hero .container {
+      text-align: center;
+    }
+
+    .faq-page #faq-title {
+      max-width: 100%;
+      margin: 0 auto 20px;
+      font-size: clamp(1.8rem, 4vw + 1rem, 3.2rem);
+      line-height: 1.3;
+      white-space: normal;
+      overflow-wrap: break-word;
+    }
+
+    .faq-page .compact-hero .hero-lede {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .faq-page .faq-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) !important;
+      gap: 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-page .faq-grid > details {
+      width: 100%;
+      min-width: 0;
+      grid-column: 1 / -1;
+    }
+  </style>
 </head>
-<body>
+
+<body class="faq-page">
   <a class="skip-link" href="#faqs">Skip to FAQs</a>
 
   <header class="site-header">
@@ -34,70 +82,92 @@
     <section id="faqs" class="content-section section-alt">
       <div class="container">
         <div class="faq-grid">
-          <details open>
+
+          <details name="faq" open>
             <summary>Is there an age requirement?</summary>
             <p>Learners must be international medical graduates who graduated from a university listed in the World Directory of Medical Schools. There is no age requirement.</p>
           </details>
-          <details>
+
+          <details name="faq">
             <summary>Can I complete an attachment longer than 4 weeks?</summary>
             <p>At present, the programme is offered as a 4-week NHS primary care observership.</p>
           </details>
-          <details>
+
+          <details name="faq">
             <summary>Do I need to be in the UK to apply?</summary>
             <p>No. You can register interest from outside the UK, but you must ensure you have the necessary visa or right to visit the UK.</p>
           </details>
-          <details>
+
+          <details name="faq">
             <summary>Can Hoyland Medical Practice sponsor my visa?</summary>
             <p>No. The practice cannot sponsor or assist with visa applications and cannot provide visa sponsorship letters.</p>
           </details>
-          <details>
+
+          <details name="faq">
             <summary>Is accommodation available?</summary>
             <p>Accommodation is not provided, but the team can signpost candidates toward local accommodation options if needed.</p>
           </details>
-          <details>
+
+          <details name="faq">
             <summary>Do I need a DBS check?</summary>
             <p>You may be asked to provide either a UK DBS certificate or an overseas police clearance certificate, with translation if required.</p>
           </details>
-          <details>
+
+          <details name="faq">
             <summary>Will I have a badge?</summary>
             <p>Yes. On your first day, you will be issued a badge displaying your full name and position as a Clinical Observer.</p>
           </details>
-          <details>
+
+          <details name="faq">
             <summary>What is the dress code?</summary>
             <p>Smart-casual and professional attire is recommended.</p>
           </details>
-          <details>
+
+          <details name="faq">
             <summary>Can I attend on weekends or evenings?</summary>
             <p>No. Attachments are offered during primary care working hours, Monday-Friday, 08:00-18:00, on set cohort dates and excluding bank holidays.</p>
           </details>
-          <details>
-            <summary>Why is the fee non-refundable?</summary>
-            <p>The fee covers administrative and placement-related costs. Fees are non-refundable once a place has been confirmed, but candidates can avail of another cohort in the next 12 months, subject to availability.</p>
+
+          <details name="faq">
+            <summary>What days will I be attending the attachment?</summary>
+            <p>The programme runs from Monday to Friday. One day each week will be allocated for audit/QIP work; this day may change from week to week.</p>
           </details>
-          <details>
+
+          <details name="faq">
+            <summary>Why is the fee non-refundable?</summary>
+            <p>The fee covers administrative and placement-related costs. Fees are non-refundable once a place has been confirmed, but candidates can avail of another cohort in the next 6 months, subject to availability.</p>
+          </details>
+
+          <details name="faq">
             <summary>Will I have an induction?</summary>
             <p>Yes. Candidates receive an induction on the first day, including orientation to the practice, observer role and relevant governance requirements.</p>
           </details>
-          <details>
+
+          <details name="faq">
             <summary>Is there somewhere to buy lunch?</summary>
             <p>You may bring a packed lunch. Nearby places to purchase lunch are available in Hoyland and the surrounding area.</p>
           </details>
-          <details>
+
+          <details name="faq">
             <summary>Will I receive a certificate?</summary>
             <p>Yes. A certificate confirming attendance is provided after successful completion of the attachment.</p>
           </details>
-          <details>
+
+          <details name="faq">
             <summary>Can I complete audits during my attachment?</summary>
-            <p>Portfolio, audit or quality improvement exposure may be available depending on practice capacity and supervision.</p>
+            <p>You will have the opportunity to complete 1 clinical audit or quality improvement project (QIP) during your attachment.</p>
           </details>
-          <details>
+
+          <details name="faq">
             <summary>Will I receive a reference at the end?</summary>
             <p>References are discretionary and depend on attendance, professionalism and performance during the programme. Completion does not guarantee a reference.</p>
           </details>
-          <details>
+
+          <details name="faq">
             <summary>I still have questions.</summary>
             <p>Email <a href="mailto:syicb-barnsley.hoyland@nhs.net">syicb-barnsley.hoyland@nhs.net</a> for further queries.</p>
           </details>
+
         </div>
 
         <div class="back-link-wrap">
@@ -120,5 +190,23 @@
       <p>© 2026 Hoyland Medical Practice. All Rights Reserved.</p>
     </div>
   </footer>
+
+  <script>
+    // Only one FAQ can remain open at a time.
+    const faqItems = document.querySelectorAll('.faq-grid details');
+
+    faqItems.forEach((item) => {
+      item.addEventListener('toggle', () => {
+        if (item.open) {
+          faqItems.forEach((other) => {
+            if (other !== item) {
+              other.open = false;
+            }
+          });
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
